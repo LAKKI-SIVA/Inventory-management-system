@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Product Details: {{ product.name }} - Inventory System{% endblock %}
+{% block nav_products %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-start;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">{{ product.name }}</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <a href="{% url 'ui_product_list' %}" style="text-decoration: none; color: inherit;">Products</a> / {{ product.sku }}
+        </p>
+    </div>
+    
+    <div style="display: flex; gap: 1rem;">
+        <a href="{% url 'ui_product_edit' product.id %}" class="btn btn-primary" style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+            Edit Product
+        </a>
+        <a href="{% url 'ui_product_delete' product.id %}" class="btn btn-outline" style="display: flex; align-items: center; gap: 0.5rem; color: var(--danger-color); border-color: var(--danger-color);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            Delete
+        </a>
+    </div>
+</div>
+
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+    <!-- Left Column: Primary Details -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        {% if product.image %}
+        <div class="form-container" style="margin: 0; max-width: none; text-align: center; padding: 1rem;">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 100%; max-height: 300px; border-radius: 8px; object-fit: contain;">
+        </div>
+        {% endif %}
+        
+        <div class="form-container" style="margin: 0; max-width: none;">
+        <div class="form-header">
+            <h3>Product Information</h3>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+            <div>
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">SKU</label>
+                <div style="font-weight: 500;">{{ product.sku }}</div>
+            </div>
+            <div>
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Status</label>
+                <div>
+                    {% if product.status == 'ACTIVE' %}
+                        <span class="badge badge-success">Active</span>
+                    {% elif product.status == 'DRAFT' %}
+                        <span class="badge badge-warning">Draft</span>
+                    {% else %}
+                        <span class="badge badge-danger">Discontinued</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div>
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Price</label>
+                <div style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary);">${{ product.price|floatformat:2 }}</div>
+            </div>
+            <div>
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Category</label>
+                <div>{{ product.category.name }}</div>
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 2rem;">
+            <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Description</label>
+            <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; font-size: 0.875rem;">
+                {{ product.description|default:"No description provided."|linebreaks }}
+            </div>
+        </div>
+        
+        {% if product.supplier %}
+        <div>
+            <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Supplier</label>
+            <div style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px;">
+                <div style="width: 40px; height: 40px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <div>
+                    <div style="font-weight: 500;">{{ product.supplier.name }}</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary);">{{ product.supplier.email }}</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    
+    <!-- Sidebar / Inventory Status -->
+    <div class="form-container" style="margin: 0; max-width: none; background: #f8fafc; border: 1px solid var(--border-color);">
+        <div class="form-header">
+            <h3>Inventory Status</h3>
+        </div>
+        
+        {% if product.stock %}
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; font-weight: 700; color: var(--text-primary); line-height: 1;">{{ product.stock.quantity }}</div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Units in Stock</div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem;">
+                <span style="color: var(--text-secondary); font-size: 0.875rem;">Reorder Level</span>
+                <span style="font-weight: 500;">{{ product.stock.reorder_level }}</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 2rem;">
+                <span style="color: var(--text-secondary); font-size: 0.875rem;">Status</span>
+                {% if product.stock.quantity <= product.stock.reorder_level %}
+                    <span class="badge badge-danger">Low Stock</span>
+                {% else %}
+                    <span class="badge badge-success">In Stock</span>
+                {% endif %}
+            </div>
+            
+            <a href="#" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center;">Adjust Stock</a>
+        {% else %}
+            <div style="text-align: center; padding: 2rem 0;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-secondary); margin-bottom: 1rem;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <h4 style="margin: 0 0 0.5rem 0;">No Inventory Record</h4>
+                <p style="margin: 0 0 1.5rem 0; font-size: 0.875rem; color: var(--text-secondary);">This product does not have an inventory record yet.</p>
+                <a href="#" class="btn btn-outline">Initialize Stock</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

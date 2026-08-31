@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Adjust Stock - Inventory System{% endblock %}
+{% block nav_inventory %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Adjust Stock: {{ stock.product.name }}</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <a href="{% url 'ui_product_detail' stock.product.id %}" style="text-decoration: none; color: inherit;">Product Details</a> / Adjust Stock
+        </p>
+    </div>
+</div>
+
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+    <div class="form-container" style="margin: 0; max-width: none;">
+        <div class="form-header">
+            <h3>Record Transaction</h3>
+        </div>
+        
+        <form method="POST">
+            {% csrf_token %}
+            
+            {% if form.non_field_errors %}
+            <div style="background-color: #fee2e2; color: #b91c1c; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.875rem;">
+                {{ form.non_field_errors }}
+            </div>
+            {% endif %}
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.transaction_type.id_for_label }}">Transaction Type <span style="color: var(--danger-color);">*</span></label>
+                    {{ form.transaction_type }}
+                    {% if form.transaction_type.errors %}<div class="form-error">{{ form.transaction_type.errors }}</div>{% endif %}
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">Select whether stock is entering or leaving the warehouse.</div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.quantity.id_for_label }}">Quantity <span style="color: var(--danger-color);">*</span></label>
+                    {{ form.quantity }}
+                    {% if form.quantity.errors %}<div class="form-error">{{ form.quantity.errors }}</div>{% endif %}
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="{{ form.reference_number.id_for_label }}">Reference Number</label>
+                {{ form.reference_number }}
+                {% if form.reference_number.errors %}<div class="form-error">{{ form.reference_number.errors }}</div>{% endif %}
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">Optional: Purchase Order, Invoice, or Receipt number.</div>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 2rem;">
+                <label class="form-label" for="{{ form.notes.id_for_label }}">Notes</label>
+                {{ form.notes }}
+                {% if form.notes.errors %}<div class="form-error">{{ form.notes.errors }}</div>{% endif %}
+            </div>
+            
+            <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+                <a href="{% url 'ui_product_detail' stock.product.id %}" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary">Submit Adjustment</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="form-container" style="margin: 0; max-width: none; background: #f8fafc;">
+        <div class="form-header">
+            <h3>Current Status</h3>
+        </div>
+        
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div style="font-size: 3rem; font-weight: 700; color: var(--text-primary); line-height: 1;">{{ stock.quantity }}</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Units currently in stock</div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <span style="color: var(--text-secondary); font-size: 0.875rem;">Reorder Level</span>
+            <span style="font-weight: 500;">{{ stock.reorder_level }}</span>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="color: var(--text-secondary); font-size: 0.875rem;">Status</span>
+            {% if stock.quantity <= stock.reorder_level %}
+                <span class="badge badge-danger">Low Stock</span>
+            {% else %}
+                <span class="badge badge-success">In Stock</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

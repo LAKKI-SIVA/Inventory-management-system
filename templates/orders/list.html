@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Orders - Inventory System{% endblock %}
+{% block nav_orders %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Orders</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">Manage customer sales and fulfillment</p>
+    </div>
+</div>
+
+<div class="table-container">
+    <div class="table-header">
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <a href="{% url 'ui_order_list' %}" class="btn {% if not request.GET.status %}btn-primary{% else %}btn-outline{% endif %}">All</a>
+            <a href="?status=PENDING" class="btn {% if request.GET.status == 'PENDING' %}btn-primary{% else %}btn-outline{% endif %}">Pending</a>
+            <a href="?status=SHIPPED" class="btn {% if request.GET.status == 'SHIPPED' %}btn-primary{% else %}btn-outline{% endif %}">Shipped</a>
+            <a href="?status=CANCELLED" class="btn {% if request.GET.status == 'CANCELLED' %}btn-primary{% else %}btn-outline{% endif %}">Cancelled</a>
+        </div>
+        
+        <div class="table-actions">
+            <a href="{% url 'ui_order_create' %}" class="btn btn-primary" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                New Order
+            </a>
+        </div>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th style="text-align: right;">Total Amount</th>
+                <th style="text-align: right;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td style="font-weight: 600;">#{{ order.id|stringformat:"05d" }}</td>
+                <td>
+                    <div style="font-weight: 500;">{{ order.customer.name }}</div>
+                </td>
+                <td>
+                    <div style="font-weight: 500;">{{ order.created_at|date:"M d, Y" }}</div>
+                </td>
+                <td>
+                    {% if order.status == 'PENDING' %}
+                        <span class="badge badge-warning">Pending</span>
+                    {% elif order.status == 'SHIPPED' %}
+                        <span class="badge badge-success">Shipped</span>
+                    {% else %}
+                        <span class="badge badge-danger">Cancelled</span>
+                    {% endif %}
+                </td>
+                <td style="text-align: right; font-weight: 600; font-size: 1.1rem;">
+                    ${{ order.total_amount|floatformat:2 }}
+                </td>
+                <td style="text-align: right;">
+                    <a href="{% url 'ui_order_detail' order.id %}" class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">View Details</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <p>No orders found.</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    {% if page_obj.has_other_pages %}
+    <div class="pagination">
+        <div class="page-info">
+            Showing {{ page_obj.start_index }} to {{ page_obj.end_index }} of {{ paginator.count }} entries
+        </div>
+        <div class="page-controls">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.status %}&status={{ request.GET.status }}{% endif %}" class="page-btn">‹</a>
+            {% endif %}
+            
+            <a href="#" class="page-btn active">{{ page_obj.number }}</a>
+            
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% if request.GET.status %}&status={{ request.GET.status }}{% endif %}" class="page-btn">›</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Category - Inventory System{% endblock %}
+{% block nav_categories %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Delete Category</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <a href="{% url 'ui_category_list' %}" style="text-decoration: none; color: inherit;">Categories</a> / Delete
+        </p>
+    </div>
+</div>
+
+<div class="form-container" style="max-width: 500px; text-align: center; padding: 3rem;">
+    <div style="color: var(--danger-color); margin-bottom: 1.5rem;">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    </div>
+    
+    <h3 style="margin-top: 0;">Are you sure you want to delete "{{ object.name }}"?</h3>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem;">This action cannot be undone. Any products currently assigned to this category will need to be reassigned.</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <div style="display: flex; justify-content: center; gap: 1rem;">
+            <a href="{% url 'ui_category_list' %}" class="btn btn-outline">Cancel</a>
+            <button type="submit" class="btn btn-primary" style="background-color: var(--danger-color); border-color: var(--danger-color);">Delete Category</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

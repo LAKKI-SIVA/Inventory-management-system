@@ -1,0 +1,10 @@
+INFO 2026-08-30 09:15:00,090 signals 25964 2964 INVENTORY ALERT: OUT of 50 for Widget A by User: invuser. New Balance: 50
+INFO 2026-08-30 09:15:00,377 signals 25964 2964 INVENTORY ALERT: IN of 50 for Widget A by User: invuser. New Balance: 50
+INFO 2026-08-30 09:15:00,659 signals 25964 2964 INVENTORY ALERT: IN of 100 for Widget A by User: invuser. New Balance: 100
+INFO 2026-08-30 09:15:00,661 signals 25964 2964 INVENTORY ALERT: OUT of 30 for Widget A by User: invuser. New Balance: 130
+INFO 2026-08-30 09:15:43,420 signals 25648 14840 INVENTORY ALERT: IN of 50 for Widget A by User: invuser. New Balance: 50
+INFO 2026-08-30 09:15:43,709 signals 25648 14840 INVENTORY ALERT: IN of 100 for Widget A by User: invuser. New Balance: 100
+INFO 2026-08-30 09:15:43,711 signals 25648 14840 INVENTORY ALERT: OUT of -30 for Widget A by User: invuser. New Balance: 70
+INFO 2026-08-30 09:16:18,133 signals 26680 21696 INVENTORY ALERT: IN of 50 for Widget A by User: invuser. New Balance: 50
+INFO 2026-08-30 09:16:18,483 signals 26680 21696 INVENTORY ALERT: IN of 100 for Widget A by User: invuser. New Balance: 100
+INFO 2026-08-30 09:16:18,485 signals 26680 21696 INVENTORY ALERT: OUT of -30 for Widget A by User: invuser. New Balance: 70

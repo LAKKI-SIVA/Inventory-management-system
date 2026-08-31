@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Order {{ order.order_number }} - Inventory System{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 2rem;">
+    <a href="{% url 'ui_order_list' %}" style="text-decoration: none; color: var(--text-secondary);">&larr; Back to Orders</a>
+</div>
+
+<div style="display: flex; gap: 2rem; align-items: flex-start;">
+    <!-- Order Header Info -->
+    <div style="flex: 1; background-color: var(--surface-color); padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <h2 style="margin-bottom: 0.5rem;">Order {{ order.order_number }}</h2>
+        <span class="status-badge status-{{ order.status }}" style="display: inline-block; margin-bottom: 1.5rem;">
+            {{ order.get_status_display }}
+        </span>
+
+        <p><strong>Customer:</strong> {{ order.customer.name }} ({{ order.customer.email }})</p>
+        <p><strong>Date:</strong> {{ order.created_at|date:"F j, Y, g:i a" }}</p>
+        <p><strong>Total Amount:</strong> ${{ order.total_amount }}</p>
+        
+        {% if order.notes %}
+            <div style="margin-top: 1rem; padding: 1rem; background-color: var(--background-color); border-radius: 4px;">
+                <strong>Notes:</strong><br>
+                {{ order.notes }}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Order Items Table -->
+    <div style="flex: 2;">
+        <h3>Order Items</h3>
+        <table class="table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th>SKU</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in order.items.all %}
+                <tr>
+                    <td>{{ item.product.sku }}</td>
+                    <td>{{ item.product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.unit_price }}</td>
+                    <td><strong>${{ item.subtotal }}</strong></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

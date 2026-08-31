@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Transaction History - Inventory System{% endblock %}
+{% block nav_inventory %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Stock Transactions</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">Audit log of all inventory movements</p>
+    </div>
+</div>
+
+<div class="table-container">
+    <div class="table-header">
+        <h3 style="margin: 0; font-size: 1rem; font-weight: 600;">Transaction History</h3>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Date / Time</th>
+                <th>Product</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Reference</th>
+                <th>User</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tx in transactions %}
+            <tr>
+                <td>
+                    <div style="font-weight: 500;">{{ tx.created_at|date:"M d, Y" }}</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary);">{{ tx.created_at|time:"h:i A" }}</div>
+                </td>
+                <td>
+                    <div style="font-weight: 500;">{{ tx.stock.product.name }}</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary);">SKU: {{ tx.stock.product.sku }}</div>
+                </td>
+                <td>
+                    {% if tx.transaction_type == 'IN' %}
+                        <span class="badge badge-success">Stock In</span>
+                    {% elif tx.transaction_type == 'OUT' %}
+                        <span class="badge badge-warning">Stock Out</span>
+                    {% else %}
+                        <span class="badge badge-neutral">Adjustment</span>
+                    {% endif %}
+                </td>
+                <td style="font-weight: 600; {% if tx.quantity > 0 %}color: #10b981;{% else %}color: #ef4444;{% endif %}">
+                    {% if tx.quantity > 0 %}+{% endif %}{{ tx.quantity }}
+                </td>
+                <td>{{ tx.reference_number|default:"-" }}</td>
+                <td>{{ tx.created_by.get_full_name|default:tx.created_by.email|default:"System" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <p>No transactions found.</p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    {% if page_obj.has_other_pages %}
+    <div class="pagination">
+        <div class="page-info">
+            Showing {{ page_obj.start_index }} to {{ page_obj.end_index }} of {{ paginator.count }} entries
+        </div>
+        <div class="page-controls">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-btn">‹</a>
+            {% endif %}
+            
+            <a href="#" class="page-btn active">{{ page_obj.number }}</a>
+            
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="page-btn">›</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

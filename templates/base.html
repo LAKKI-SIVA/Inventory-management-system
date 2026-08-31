@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inventory Management System{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    
+    <!-- Page-Specific CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    
+    <!-- Flash Messages Included -->
+    <div style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">
+        {% include "includes/messages.html" %}
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="layout-container">
+        
+        <!-- Sidebar Navigation -->
+        {% include "includes/sidebar.html" %}
+        
+        <div class="main-wrapper">
+            <!-- Top App Bar -->
+            {% include "includes/topbar.html" %}
+            
+            <!-- Primary Page Content Area -->
+            <main class="content-area">
+                {% block content %}
+                <!-- Page specific content goes here -->
+                {% endblock %}
+            </main>
+        </div>
+        
+    </div>
+
+</body>
+</html>

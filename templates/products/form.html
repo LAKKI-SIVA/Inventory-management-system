@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}{% if object %}Edit{% else %}Add{% endif %} Product - Inventory System{% endblock %}
+{% block nav_products %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">
+            {% if object %}Edit Product: {{ object.name }}{% else %}Add New Product{% endif %}
+        </h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <a href="{% url 'ui_product_list' %}" style="text-decoration: none; color: inherit;">Products</a> / 
+            {% if object %}Edit{% else %}New{% endif %}
+        </p>
+    </div>
+</div>
+
+<div class="form-container">
+    <div class="form-header">
+        <h3>Product Details</h3>
+        <p>Enter the basic information, pricing, and classification for this product.</p>
+    </div>
+    
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {% if form.non_field_errors %}
+            <div class="alert alert-error" style="background: #fee2e2; color: #991b1b; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        
+        <div class="form-row">
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.name.errors.0 }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="{{ form.sku.id_for_label }}">{{ form.sku.label }}</label>
+                    {{ form.sku }}
+                    {% if form.sku.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.sku.errors.0 }}</span>
+                    {% else %}
+                        <span class="help-text">Unique identifier (e.g. WH-001)</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.description.id_for_label }}">{{ form.description.label }}</label>
+            {{ form.description }}
+            {% if form.description.errors %}
+                <span class="help-text" style="color: var(--danger-color);">{{ form.description.errors.0 }}</span>
+            {% endif %}
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="{{ form.price.id_for_label }}">{{ form.price.label }}</label>
+                    <div style="position: relative;">
+                        <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary);">$</span>
+                        {{ form.price }}
+                    </div>
+                    {% if form.price.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.price.errors.0 }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="{{ form.status.id_for_label }}">{{ form.status.label }}</label>
+                    {{ form.status }}
+                    {% if form.status.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.status.errors.0 }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-header" style="margin-top: 2rem;">
+            <h3>Classification</h3>
+            <p>Assign this product to a category and supplier.</p>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="{{ form.category.id_for_label }}">{{ form.category.label }}</label>
+                    {{ form.category }}
+                    {% if form.category.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.category.errors.0 }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="{{ form.supplier.id_for_label }}">{{ form.supplier.label }}</label>
+                    {{ form.supplier }}
+                    {% if form.supplier.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.supplier.errors.0 }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-actions">
+            <a href="{% url 'ui_product_list' %}" class="btn btn-outline">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save Product</button>
+        </div>
+    </form>
+</div>
+
+<!-- Inline CSS specific to this form to handle the price input padding -->
+<style>
+    #id_price {
+        padding-left: 2rem;
+    }
+</style>
+{% endblock %}

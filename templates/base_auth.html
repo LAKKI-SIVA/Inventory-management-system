@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inventory Management System{% endblock %}</title>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Page-Specific CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="auth-page">
+    
+    <!-- Flash Messages Included -->
+    <div style="position: fixed; top: 1rem; right: 1rem; z-index: 100;">
+        {% include "includes/messages.html" %}
+    </div>
+
+    <div class="auth-split-layout">
+        
+        <!-- Left Side: Branding -->
+        <div class="auth-left">
+            <div class="auth-left-content">
+                <div class="auth-logo">
+                    <div class="auth-logo-icon">
+                        <!-- Box Icon SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="auth-logo-text">
+                        <h2>IMS</h2>
+                        <p>Inventory Management System</p>
+                    </div>
+                </div>
+
+                <h1 class="auth-headline">Manage Inventory Smarter, Not Harder</h1>
+                <p class="auth-subtitle">Powerful inventory and order management system to streamline your business operations and boost efficiency.</p>
+
+                <div class="auth-features">
+                    <div class="auth-feature-item">
+                        <div class="auth-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <div class="auth-feature-text">
+                            <h4>Real-time Inventory</h4>
+                            <p>Track stock levels in real-time and never run out of products.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-feature-item">
+                        <div class="auth-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        </div>
+                        <div class="auth-feature-text">
+                            <h4>Order Management</h4>
+                            <p>Process orders efficiently and keep customers happy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-feature-item">
+                        <div class="auth-feature-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <div class="auth-feature-text">
+                            <h4>Analytics & Reports</h4>
+                            <p>Get insights with detailed reports and analytics dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-stats">
+                    <div class="auth-stat-item">
+                        <div class="auth-stat-icon" style="margin-bottom: 0.5rem; text-align: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <div class="auth-stat-value">1,246</div>
+                        <div class="auth-stat-label">Products</div>
+                    </div>
+                    
+                    <div class="auth-stat-item">
+                        <div class="auth-stat-icon" style="margin-bottom: 0.5rem; text-align: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        </div>
+                        <div class="auth-stat-value">532</div>
+                        <div class="auth-stat-label">Orders</div>
+                    </div>
+                    
+                    <div class="auth-stat-item">
+                        <div class="auth-stat-icon" style="margin-bottom: 0.5rem; text-align: center;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="auth-stat-value">1,024</div>
+                        <div class="auth-stat-label">Customers</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="auth-footer">
+                &copy; {% now "Y" %} Inventory Management System. All rights reserved.
+            </div>
+        </div>
+        
+        <!-- Right Side: Auth Forms -->
+        <div class="auth-right">
+            <div class="auth-form-container">
+                
+                <div class="auth-tabs">
+                    <a href="{% url 'ui_login' %}" class="auth-tab {% block tab_login_active %}{% endblock %}">Login</a>
+                    <a href="{% url 'ui_register' %}" class="auth-tab {% block tab_register_active %}{% endblock %}">Register</a>
+                </div>
+                
+                {% block auth_content %}
+                <!-- Login or Register forms injected here -->
+                {% endblock %}
+                
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

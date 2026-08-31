@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}Order #{{ order.id|stringformat:"05d" }} - Inventory System{% endblock %}
+{% block nav_orders %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-start;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Order #{{ order.id|stringformat:"05d" }}</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <a href="{% url 'ui_order_list' %}" style="text-decoration: none; color: inherit;">Orders</a> / Detail
+        </p>
+    </div>
+    
+    {% if order.status == 'PENDING' %}
+    <div>
+        <form method="POST" action="{% url 'ui_order_process' order.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary" style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                Process & Ship Order
+            </button>
+        </form>
+    </div>
+    {% endif %}
+</div>
+
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+    <!-- Order Items -->
+    <div class="form-container" style="margin: 0; max-width: none; padding: 0;">
+        <div class="form-header" style="padding: 1.5rem;">
+            <h3 style="margin: 0;">Order Items</h3>
+        </div>
+        
+        <table class="data-table" style="box-shadow: none;">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th style="text-align: right;">Unit Price</th>
+                    <th style="text-align: center;">Quantity</th>
+                    <th style="text-align: right;">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in order.items.all %}
+                <tr>
+                    <td>
+                        <div style="font-weight: 500;">{{ item.product.name }}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">SKU: {{ item.product.sku }}</div>
+                    </td>
+                    <td style="text-align: right;">${{ item.product.price|floatformat:2 }}</td>
+                    <td style="text-align: center; font-weight: 600;">x{{ item.quantity }}</td>
+                    <td style="text-align: right; font-weight: 600;">
+                        ${% widthratio item.product.price 1 item.quantity %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <div style="padding: 1.5rem; text-align: right; border-top: 1px solid var(--border-color); background: #f8fafc; border-radius: 0 0 12px 12px;">
+            <div style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Total Amount</div>
+            <div style="font-size: 2rem; font-weight: 700; color: var(--text-primary); line-height: 1;">${{ order.total_amount|floatformat:2 }}</div>
+        </div>
+    </div>
+    
+    <!-- Order Info Sidebar -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div class="form-container" style="margin: 0; max-width: none;">
+            <div class="form-header">
+                <h3 style="margin: 0;">Order Details</h3>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Status</label>
+                <div>
+                    {% if order.status == 'PENDING' %}
+                        <span class="badge badge-warning">Pending Fulfillment</span>
+                    {% elif order.status == 'SHIPPED' %}
+                        <span class="badge badge-success">Shipped</span>
+                    {% else %}
+                        <span class="badge badge-danger">Cancelled</span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Date Created</label>
+                <div style="font-weight: 500;">{{ order.created_at|date:"F d, Y - h:i A" }}</div>
+            </div>
+            
+            {% if order.notes %}
+            <div>
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Notes</label>
+                <div style="font-size: 0.875rem; padding: 1rem; background: #f1f5f9; border-radius: 8px;">{{ order.notes }}</div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="form-container" style="margin: 0; max-width: none;">
+            <div class="form-header">
+                <h3 style="margin: 0;">Customer Information</h3>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="width: 48px; height: 48px; background: #e0e7ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4f46e5; font-weight: 600; font-size: 1.25rem;">
+                    {{ order.customer.name|make_list|first|upper }}
+                </div>
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem;">{{ order.customer.name }}</div>
+                    <div style="font-size: 0.875rem; color: var(--text-secondary);">{{ order.customer.email }}</div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Phone</label>
+                <div style="font-weight: 500;">{{ order.customer.phone }}</div>
+            </div>
+            
+            <div>
+                <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;">Shipping Address</label>
+                <div style="font-size: 0.875rem; line-height: 1.5;">{{ order.customer.address|linebreaksbr }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

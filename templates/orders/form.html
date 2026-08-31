@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Create New Order - Inventory System{% endblock %}
+{% block nav_orders %}active{% endblock %}
+
+{% block content %}
+<div class="page-header" style="margin-bottom: 2rem;">
+    <div class="page-title">
+        <h1 style="margin: 0; font-size: 1.5rem; font-weight: 700;">Create New Order</h1>
+        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <a href="{% url 'ui_order_list' %}" style="text-decoration: none; color: inherit;">Orders</a> / New
+        </p>
+    </div>
+</div>
+
+<div class="form-container" style="max-width: 800px;">
+    <form method="POST">
+        {% csrf_token %}
+        
+        {% if form.non_field_errors %}
+        <div style="background-color: #fee2e2; color: #b91c1c; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.875rem;">
+            {{ form.non_field_errors }}
+        </div>
+        {% endif %}
+        
+        <div class="form-header">
+            <h3>Order Details</h3>
+        </div>
+        
+        <div class="form-group">
+            <label class="form-label" for="{{ form.customer.id_for_label }}">Select Customer <span style="color: var(--danger-color);">*</span></label>
+            {{ form.customer }}
+            {% if form.customer.errors %}<div class="form-error">{{ form.customer.errors }}</div>{% endif %}
+        </div>
+        
+        <div class="form-group">
+            <label class="form-label" for="{{ form.notes.id_for_label }}">Order Notes</label>
+            {{ form.notes }}
+            {% if form.notes.errors %}<div class="form-error">{{ form.notes.errors }}</div>{% endif %}
+        </div>
+
+        <div class="form-header" style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+            <h3>Line Items</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">Add up to 3 products to this order (No JS limitations).</p>
+        </div>
+        
+        {{ items.management_form }}
+        
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 2rem;">
+            {% for item_form in items %}
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div>
+                    <label class="form-label">Product</label>
+                    {{ item_form.product }}
+                    {% if item_form.product.errors %}<div class="form-error">{{ item_form.product.errors }}</div>{% endif %}
+                </div>
+                <div>
+                    <label class="form-label">Quantity</label>
+                    {{ item_form.quantity }}
+                    {% if item_form.quantity.errors %}<div class="form-error">{{ item_form.quantity.errors }}</div>{% endif %}
+                </div>
+                <!-- Hidden fields for formset tracking -->
+                {% for hidden in item_form.hidden_fields %}
+                    {{ hidden }}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <div style="display: flex; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem; justify-content: flex-end;">
+            <a href="{% url 'ui_order_list' %}" class="btn btn-outline">Cancel</a>
+            <button type="submit" class="btn btn-primary">Create Order</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

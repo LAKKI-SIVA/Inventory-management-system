@@ -1,0 +1,280 @@
+INFO 2026-08-30 09:10:20,751 autoreload 14952 21984 Watching for file changes with StatReloader
+WARNING 2026-08-30 09:13:54,268 log 11536 31424 Unauthorized: /accounts/api/login/
+WARNING 2026-08-30 09:14:29,040 log 27176 13456 Unauthorized: /accounts/api/login/
+WARNING 2026-08-30 09:14:58,648 log 25964 2964 Unauthorized: /accounts/api/login/
+WARNING 2026-08-30 09:15:01,537 log 25964 2964 Unauthorized: /products/api/
+WARNING 2026-08-30 09:15:41,647 log 25648 14840 Unauthorized: /accounts/api/login/
+WARNING 2026-08-30 09:15:44,601 log 25648 14840 Unauthorized: /products/api/
+WARNING 2026-08-30 09:16:16,356 log 26680 21696 Unauthorized: /accounts/api/login/
+WARNING 2026-08-30 09:16:19,353 log 26680 21696 Unauthorized: /products/api/
+INFO 2026-08-30 09:17:38,301 autoreload 1180 17172 Watching for file changes with StatReloader
+INFO 2026-08-30 09:23:15,201 log 1180 10816 "GET / HTTP/1.1" 302 0
+INFO 2026-08-30 09:23:15,216 log 1180 10816 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:23:15,249 log 1180 10816 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-08-30 09:23:15,407 log 1180 10816 "GET /static/css/base.css HTTP/1.1" 200 922
+INFO 2026-08-30 09:23:15,409 log 1180 31408 "GET /static/css/auth.css HTTP/1.1" 200 6776
+INFO 2026-08-30 09:23:15,733 log 1180 31408 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 200 816699
+WARNING 2026-08-30 09:23:17,145 log 1180 31408 Not Found: /favicon.ico
+WARNING 2026-08-30 09:23:17,145 log 1180 31408 "GET /favicon.ico HTTP/1.1" 404 3672
+INFO 2026-08-30 09:23:19,371 log 1180 31408 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-08-30 09:23:48,055 log 1180 31408 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:23:48,062 log 1180 31408 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-08-30 09:23:59,348 log 1180 31408 "POST /accounts/login/ HTTP/1.1" 200 10556
+INFO 2026-08-30 09:24:13,852 log 1180 31408 "POST /accounts/login/ HTTP/1.1" 200 10556
+INFO 2026-08-30 09:24:29,547 log 1180 31408 "POST /accounts/login/ HTTP/1.1" 200 10556
+INFO 2026-08-30 09:24:34,682 log 1180 31408 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-08-30 09:24:54,046 log 1180 31408 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:24:54,052 log 1180 31408 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-08-30 09:24:58,526 log 1180 31408 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:24:58,529 log 1180 31408 "GET / HTTP/1.1" 302 0
+INFO 2026-08-30 09:24:58,545 log 1180 31408 "GET /products/ HTTP/1.1" 200 26176
+INFO 2026-08-30 09:24:58,582 log 1180 31408 "GET /static/css/layout.css HTTP/1.1" 200 3993
+INFO 2026-08-30 09:24:58,586 log 1180 10816 "GET /static/css/components.css HTTP/1.1" 200 1454
+INFO 2026-08-30 09:24:58,587 log 1180 31408 "GET /static/css/tables.css HTTP/1.1" 200 2415
+INFO 2026-08-30 09:24:58,589 log 1180 10816 "GET /static/css/forms.css HTTP/1.1" 200 2180
+INFO 2026-08-30 09:25:03,329 log 1180 10816 "GET /products/?q=&status=ACTIVE HTTP/1.1" 200 16050
+INFO 2026-08-30 09:25:08,005 log 1180 10816 "GET /inventory/ HTTP/1.1" 200 25902
+INFO 2026-08-30 09:25:08,033 log 1180 10816 "GET /static/css/dashboard.css HTTP/1.1" 200 5691
+WARNING 2026-08-30 09:28:30,195 log 1180 10816 Method Not Allowed: /accounts/api/register/
+WARNING 2026-08-30 09:28:30,196 log 1180 10816 "GET /accounts/api/register/ HTTP/1.1" 405 8687
+INFO 2026-08-30 09:28:30,245 log 1180 10816 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-08-30 09:28:30,259 log 1180 10816 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-08-30 09:28:30,260 log 1180 31408 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-08-30 09:28:30,266 log 1180 31408 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-08-30 09:28:30,267 log 1180 10816 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2026-08-30 09:28:30,277 log 1180 31408 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-08-30 09:28:30,289 log 1180 10816 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-08-30 09:28:30,292 log 1180 10816 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-08-30 09:28:30,293 log 1180 31408 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-08-30 09:28:30,297 log 1180 10816 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-08-30 09:28:30,297 log 1180 31408 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-08-30 09:28:30,628 log 1180 31408 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-08-30 09:28:49,193 log 1180 31408 "POST /accounts/api/register/ HTTP/1.1" 201 8941
+INFO 2026-08-30 09:29:21,102 log 1180 31408 "OPTIONS /accounts/api/register/ HTTP/1.1" 200 10996
+INFO 2026-08-30 09:29:28,967 log 1180 31408 "POST /accounts/api/register/ HTTP/1.1" 201 8884
+WARNING 2026-08-30 09:30:10,160 log 1180 31408 Method Not Allowed: /accounts/api/login/
+WARNING 2026-08-30 09:30:10,161 log 1180 31408 "GET /accounts/api/login/ HTTP/1.1" 405 7654
+INFO 2026-08-30 09:30:28,884 log 1180 31408 "POST /accounts/api/login/ HTTP/1.1" 200 8104
+INFO 2026-08-30 09:31:04,685 log 1180 31408 "OPTIONS /accounts/api/login/ HTTP/1.1" 200 8640
+INFO 2026-08-30 09:31:06,000 log 1180 31408 "OPTIONS /accounts/api/login/ HTTP/1.1" 200 8640
+INFO 2026-08-30 09:31:07,370 log 1180 31408 "OPTIONS /accounts/api/login/ HTTP/1.1" 200 8640
+INFO 2026-08-30 09:31:32,382 log 1180 31408 "GET /products/api/ HTTP/1.1" 200 16042
+INFO 2026-08-30 09:31:37,169 log 1180 31408 "GET /products/api/?format=json HTTP/1.1" 200 2073
+INFO 2026-08-30 09:34:33,528 log 1180 31408 "GET /categories/ HTTP/1.1" 200 16211
+INFO 2026-08-30 09:34:39,446 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25902
+INFO 2026-08-30 09:34:46,886 log 1180 31408 "GET /categories/ HTTP/1.1" 200 16211
+INFO 2026-08-30 09:34:56,844 log 1180 31408 "GET /categories/?q=Electronics HTTP/1.1" 200 14580
+INFO 2026-08-30 09:35:00,205 log 1180 31408 "GET /categories/?q=Electronics HTTP/1.1" 200 14580
+INFO 2026-08-30 09:35:02,492 log 1180 31408 "GET /categories/new/ HTTP/1.1" 200 13617
+INFO 2026-08-30 09:35:12,360 log 1180 31408 "POST /categories/new/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:35:12,374 log 1180 31408 "GET /categories/ HTTP/1.1" 200 17164
+INFO 2026-08-30 09:35:24,557 log 1180 31408 "GET /categories/?q=Basmati+Rice HTTP/1.1" 200 14553
+INFO 2026-08-30 09:35:29,503 log 1180 31408 "GET /products/ HTTP/1.1" 200 26176
+INFO 2026-08-30 09:35:34,791 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25902
+INFO 2026-08-30 09:35:41,744 log 1180 31408 "GET /orders/ HTTP/1.1" 200 13979
+INFO 2026-08-30 09:35:43,912 log 1180 31408 "GET /orders/?status=PENDING HTTP/1.1" 200 13979
+INFO 2026-08-30 09:35:45,033 log 1180 31408 "GET /orders/?status=SHIPPED HTTP/1.1" 200 13979
+INFO 2026-08-30 09:35:46,140 log 1180 31408 "GET /orders/?status=CANCELLED HTTP/1.1" 200 13979
+INFO 2026-08-30 09:35:47,852 log 1180 31408 "GET /orders/ HTTP/1.1" 200 13979
+INFO 2026-08-30 09:35:51,486 log 1180 31408 "GET /orders/new/ HTTP/1.1" 200 18400
+WARNING 2026-08-30 09:38:58,721 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:38:58,723 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:01,258 log 1180 31408 "GET /orders/new/ HTTP/1.1" 200 18431
+WARNING 2026-08-30 09:39:01,388 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:01,389 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:05,449 log 1180 31408 "GET /orders/new/ HTTP/1.1" 200 18431
+WARNING 2026-08-30 09:39:05,563 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:05,564 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:06,701 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25933
+WARNING 2026-08-30 09:39:06,841 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:06,843 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:08,881 log 1180 31408 "GET /categories/ HTTP/1.1" 200 17044
+WARNING 2026-08-30 09:39:09,033 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:09,034 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:10,945 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25933
+WARNING 2026-08-30 09:39:11,115 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:11,116 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:12,631 log 1180 31408 "GET /categories/ HTTP/1.1" 200 17044
+WARNING 2026-08-30 09:39:12,799 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:12,800 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:14,125 log 1180 31408 "GET /products/ HTTP/1.1" 200 26207
+WARNING 2026-08-30 09:39:14,302 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:14,303 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:16,196 log 1180 31408 "GET /suppliers/ HTTP/1.1" 200 17162
+WARNING 2026-08-30 09:39:16,393 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:16,394 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:18,024 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25933
+WARNING 2026-08-30 09:39:18,237 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:18,238 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:20,486 log 1180 31408 "GET /orders/ HTTP/1.1" 200 14010
+WARNING 2026-08-30 09:39:20,703 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:20,704 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:22,182 log 1180 31408 "GET /customers/ HTTP/1.1" 200 14488
+WARNING 2026-08-30 09:39:22,433 log 1180 31408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-30 09:39:22,434 log 1180 31408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-30 09:39:45,053 log 1180 31408 "GET /categories/ HTTP/1.1" 200 17044
+INFO 2026-08-30 09:39:48,078 log 1180 31408 "GET /products/ HTTP/1.1" 200 26207
+INFO 2026-08-30 09:39:50,544 log 1180 31408 "GET /suppliers/ HTTP/1.1" 200 17162
+INFO 2026-08-30 09:39:52,185 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25933
+INFO 2026-08-30 09:39:57,226 log 1180 31408 "GET /inventory/ HTTP/1.1" 200 25933
+INFO 2026-08-30 09:40:00,213 log 1180 31408 "GET /suppliers/ HTTP/1.1" 200 17162
+INFO 2026-08-30 09:40:02,849 log 1180 31408 "GET /categories/ HTTP/1.1" 200 17044
+INFO 2026-08-30 09:40:09,644 log 1180 31408 "GET /categories/4/delete/ HTTP/1.1" 200 13401
+INFO 2026-08-30 09:40:11,962 log 1180 31408 "POST /categories/4/delete/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:40:11,973 log 1180 31408 "GET /categories/ HTTP/1.1" 200 16242
+INFO 2026-08-30 09:40:13,819 log 1180 31408 "GET /categories/1/delete/ HTTP/1.1" 200 13400
+ERROR 2026-08-30 09:40:15,582 log 1180 31408 Internal Server Error: /categories/1/delete/
+Traceback (most recent call last):
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\core\handlers\base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\contrib\auth\mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\views\generic\edit.py", line 258, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\views\generic\edit.py", line 264, in form_valid
+    self.object.delete()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\db\models\base.py", line 1332, in delete
+    collector.collect([self], keep_parents=keep_parents)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\venv\Lib\site-packages\django\db\models\deletion.py", line 385, in collect
+    raise ProtectedError(
+    ...<7 lines>...
+    )
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Category' because they are referenced through protected foreign keys: 'Product.category'.", {<Product: LAP-001 - ThinkPad T14>, <Product: MON-001 - Dell 27" Monitor>, <Product: data - device>, <Product: wertg - wedrfwer>, <Product: sku - data>})
+ERROR 2026-08-30 09:40:15,591 log 1180 31408 "POST /categories/1/delete/ HTTP/1.1" 500 107399
+INFO 2026-08-30 09:41:24,005 autoreload 1180 17172 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\categories\views.py changed, reloading.
+INFO 2026-08-30 09:41:25,037 autoreload 31308 27592 Watching for file changes with StatReloader
+INFO 2026-08-30 09:48:06,071 log 31308 2564 "POST /categories/1/delete/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:48:06,094 log 31308 2564 "GET /categories/ HTTP/1.1" 200 16428
+INFO 2026-08-30 09:48:09,167 log 31308 2564 "GET /categories/1/delete/ HTTP/1.1" 200 13400
+INFO 2026-08-30 09:48:10,742 log 31308 2564 "POST /categories/1/delete/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:48:10,754 log 31308 2564 "GET /categories/ HTTP/1.1" 200 16428
+INFO 2026-08-30 09:48:13,134 log 31308 2564 "GET /categories/3/delete/ HTTP/1.1" 200 13398
+INFO 2026-08-30 09:48:14,632 log 31308 2564 "POST /categories/3/delete/ HTTP/1.1" 302 0
+INFO 2026-08-30 09:48:14,645 log 31308 2564 "GET /categories/ HTTP/1.1" 200 16428
+INFO 2026-08-30 12:38:45,864 autoreload 5800 6704 Watching for file changes with StatReloader
+INFO 2026-08-30 18:48:42,723 log 5800 31876 "GET /categories/ HTTP/1.1" 200 16242
+INFO 2026-08-30 23:10:22,851 autoreload 30120 31720 Watching for file changes with StatReloader
+INFO 2026-08-31 07:50:04,785 autoreload 23564 31432 Watching for file changes with StatReloader
+INFO 2026-08-31 07:50:31,274 log 30120 32100 "GET / HTTP/1.1" 302 0
+INFO 2026-08-31 07:50:31,597 log 30120 32100 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:50:31,745 log 30120 32100 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-08-31 07:50:31,841 log 30120 32100 "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:50:31,865 log 30120 32100 "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:50:32,444 log 30120 32100 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 304 0
+WARNING 2026-08-31 07:50:33,362 log 30120 32100 Not Found: /favicon.ico
+WARNING 2026-08-31 07:50:33,365 log 30120 32100 "GET /favicon.ico HTTP/1.1" 404 3672
+INFO 2026-08-31 07:50:36,068 log 30120 32100 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-08-31 07:51:22,452 log 30120 32100 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:51:22,466 log 30120 32100 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-08-31 07:51:27,411 log 30120 32100 "POST /accounts/login/ HTTP/1.1" 200 10556
+INFO 2026-08-31 07:51:37,671 log 30120 32100 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:51:37,681 log 30120 32100 "GET / HTTP/1.1" 302 0
+INFO 2026-08-31 07:51:37,831 log 30120 32100 "GET /products/ HTTP/1.1" 200 14825
+INFO 2026-08-31 07:51:37,919 log 30120 19076 "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:51:37,921 log 30120 32100 "GET /static/css/layout.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:51:37,926 log 30120 24036 "GET /static/css/forms.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:51:37,927 log 30120 13900 "GET /static/css/tables.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:51:44,098 log 30120 13900 "GET /products/new/ HTTP/1.1" 200 15892
+INFO 2026-08-31 07:52:42,058 log 30120 13900 "GET /inventory/ HTTP/1.1" 200 22791
+INFO 2026-08-31 07:52:42,107 log 30120 13900 "GET /static/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-08-31 07:52:50,228 log 30120 13900 "GET /categories/ HTTP/1.1" 200 14330
+INFO 2026-08-31 07:52:56,829 log 30120 13900 "GET /categories/new/ HTTP/1.1" 200 13636
+INFO 2026-08-31 07:53:09,370 log 30120 13900 "POST /categories/new/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:53:09,498 log 30120 13900 "GET /categories/ HTTP/1.1" 200 14708
+INFO 2026-08-31 07:53:14,917 log 30120 13900 "GET /products/ HTTP/1.1" 200 14825
+INFO 2026-08-31 07:53:24,633 log 30120 13900 "GET /products/new/ HTTP/1.1" 200 15927
+INFO 2026-08-31 07:53:34,984 log 30120 13900 "GET /suppliers/ HTTP/1.1" 200 14371
+INFO 2026-08-31 07:53:37,843 log 30120 13900 "GET /suppliers/new/ HTTP/1.1" 200 14784
+INFO 2026-08-31 07:54:10,938 log 30120 13900 "POST /suppliers/new/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:54:11,060 log 30120 13900 "GET /suppliers/ HTTP/1.1" 200 15619
+INFO 2026-08-31 07:54:14,802 log 30120 13900 "GET /customers/ HTTP/1.1" 200 14476
+INFO 2026-08-31 07:54:18,900 log 30120 13900 "GET /customers/new/ HTTP/1.1" 200 14208
+INFO 2026-08-31 07:54:46,643 log 30120 13900 "POST /customers/new/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:54:46,769 log 30120 13900 "GET /customers/ HTTP/1.1" 200 15452
+INFO 2026-08-31 07:54:51,522 log 30120 13900 "GET /orders/ HTTP/1.1" 200 13998
+INFO 2026-08-31 07:54:55,813 log 30120 13900 "GET /orders/new/ HTTP/1.1" 200 17364
+INFO 2026-08-31 07:55:10,065 log 30120 13900 "GET /products/ HTTP/1.1" 200 14825
+INFO 2026-08-31 07:55:12,101 log 30120 13900 "GET /products/new/ HTTP/1.1" 200 15980
+INFO 2026-08-31 07:55:38,299 log 30120 13900 "POST /products/new/ HTTP/1.1" 200 16374
+INFO 2026-08-31 07:55:56,365 log 30120 13900 "GET /inventory/ HTTP/1.1" 200 23411
+INFO 2026-08-31 07:56:10,895 log 30120 13900 "GET /customers/ HTTP/1.1" 200 15301
+INFO 2026-08-31 07:56:45,096 log 30120 13900 "GET / HTTP/1.1" 302 0
+INFO 2026-08-31 07:56:45,360 log 30120 13900 "GET /products/ HTTP/1.1" 200 15942
+INFO 2026-08-31 07:58:13,044 log 30120 13900 "GET /admin HTTP/1.1" 301 0
+INFO 2026-08-31 07:58:13,355 log 30120 13900 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:58:13,535 log 30120 13900 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3830
+INFO 2026-08-31 07:58:13,979 log 30120 13900 "GET /static/admin/css/base.css HTTP/1.1" 200 24538
+INFO 2026-08-31 07:58:13,997 log 30120 19968 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3583
+INFO 2026-08-31 07:58:14,013 log 30120 16140 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2814
+INFO 2026-08-31 07:58:14,120 log 30120 27312 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-08-31 07:58:14,124 log 30120 18120 "GET /static/admin/js/theme.js HTTP/1.1" 200 1708
+INFO 2026-08-31 07:58:14,128 log 30120 28680 "GET /static/admin/css/responsive.css HTTP/1.1" 200 15025
+INFO 2026-08-31 07:58:14,327 log 30120 28680 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3208
+INFO 2026-08-31 07:59:21,805 log 30120 28680 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-08-31 07:59:21,999 log 30120 28680 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3830
+INFO 2026-08-31 07:59:37,985 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3998
+WARNING 2026-08-31 07:59:56,497 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 07:59:56,498 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:00:08,559 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3998
+WARNING 2026-08-31 08:00:08,707 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:00:08,709 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:00:49,289 log 30120 28680 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-08-31 08:00:49,491 log 30120 28680 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3830
+INFO 2026-08-31 08:01:03,874 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 3998
+INFO 2026-08-31 08:01:37,410 log 30120 20888 "GET /admin HTTP/1.1" 301 0
+INFO 2026-08-31 08:01:37,419 log 30120 20888 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-08-31 08:01:37,450 log 30120 20888 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4307
+INFO 2026-08-31 08:01:37,553 log 30120 20888 "GET /static/admin/css/base.css HTTP/1.1" 200 24538
+INFO 2026-08-31 08:01:37,559 log 30120 30908 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3583
+INFO 2026-08-31 08:01:37,561 log 30120 11268 "GET /static/admin/js/theme.js HTTP/1.1" 200 1708
+INFO 2026-08-31 08:01:37,581 log 30120 11268 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2814
+INFO 2026-08-31 08:01:37,584 log 30120 20888 "GET /static/admin/css/responsive.css HTTP/1.1" 200 15025
+INFO 2026-08-31 08:01:37,586 log 30120 30908 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-08-31 08:01:37,592 log 30120 30908 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3208
+INFO 2026-08-31 08:01:45,358 log 30120 30908 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4475
+INFO 2026-08-31 08:01:55,831 log 30120 30908 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4475
+INFO 2026-08-31 08:02:00,031 log 30120 30908 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4484
+WARNING 2026-08-31 08:02:03,485 log 30120 30908 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:02:03,486 log 30120 30908 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:02:11,519 log 30120 30908 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4484
+WARNING 2026-08-31 08:02:11,655 log 30120 30908 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:02:11,657 log 30120 30908 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:03:01,770 log 30120 30908 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4475
+WARNING 2026-08-31 08:03:01,882 log 30120 30908 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:03:01,886 log 30120 30908 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:03:27,506 log 30120 28680 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-08-31 08:03:27,710 log 30120 28680 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3830
+INFO 2026-08-31 08:03:38,310 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+INFO 2026-08-31 08:04:54,166 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+INFO 2026-08-31 08:05:33,908 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+INFO 2026-08-31 08:05:46,198 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+WARNING 2026-08-31 08:05:49,288 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:05:49,290 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:06:45,904 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+WARNING 2026-08-31 08:06:46,038 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:06:46,039 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:06:52,809 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+WARNING 2026-08-31 08:06:52,953 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:06:52,955 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:07:02,973 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+WARNING 2026-08-31 08:07:03,138 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:07:03,139 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:07:06,568 log 30120 28680 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4007
+WARNING 2026-08-31 08:07:06,772 log 30120 28680 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-08-31 08:07:06,773 log 30120 28680 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3783
+INFO 2026-08-31 08:16:15,890 log 30120 14696 "GET /products/ HTTP/1.1" 200 15942
+INFO 2026-08-31 08:16:19,994 log 30120 14696 "GET /inventory/ HTTP/1.1" 200 23411
+INFO 2026-08-31 08:16:21,200 log 30120 14696 "GET /categories/ HTTP/1.1" 200 14557
+INFO 2026-08-31 08:16:22,300 log 30120 14696 "GET /products/ HTTP/1.1" 200 15942
+INFO 2026-08-31 08:16:23,939 log 30120 14696 "GET /products/ HTTP/1.1" 200 15942
