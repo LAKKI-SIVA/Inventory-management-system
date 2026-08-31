@@ -278,3 +278,7 @@ INFO 2026-08-31 08:16:19,994 log 30120 14696 "GET /inventory/ HTTP/1.1" 200 2341
 INFO 2026-08-31 08:16:21,200 log 30120 14696 "GET /categories/ HTTP/1.1" 200 14557
 INFO 2026-08-31 08:16:22,300 log 30120 14696 "GET /products/ HTTP/1.1" 200 15942
 INFO 2026-08-31 08:16:23,939 log 30120 14696 "GET /products/ HTTP/1.1" 200 15942
+INFO 2026-08-31 11:45:33,692 autoreload 30120 31720 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-08-31 11:45:34,083 autoreload 23564 31432 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-08-31 11:45:36,052 autoreload 13716 21628 Watching for file changes with StatReloader
+INFO 2026-08-31 11:45:36,052 autoreload 25800 2084 Watching for file changes with StatReloader

@@ -15,7 +15,7 @@ SECRET_KEY = get_env_var('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = get_env_var('DEBUG', default=False, cast_type=bool)
 
-ALLOWED_HOSTS = get_env_var('ALLOWED_HOSTS', default=[], cast_type=list)
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
