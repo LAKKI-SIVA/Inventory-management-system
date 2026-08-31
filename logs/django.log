@@ -282,3 +282,7 @@ INFO 2026-08-31 11:45:33,692 autoreload 30120 31720 C:\Users\Hp\Documents\Invent
 INFO 2026-08-31 11:45:34,083 autoreload 23564 31432 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
 INFO 2026-08-31 11:45:36,052 autoreload 13716 21628 Watching for file changes with StatReloader
 INFO 2026-08-31 11:45:36,052 autoreload 25800 2084 Watching for file changes with StatReloader
+INFO 2026-08-31 11:49:22,937 autoreload 13716 21628 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-08-31 11:49:22,984 autoreload 25800 2084 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-08-31 11:49:23,939 autoreload 24060 3744 Watching for file changes with StatReloader
+INFO 2026-08-31 11:49:23,948 autoreload 1812 31636 Watching for file changes with StatReloader
