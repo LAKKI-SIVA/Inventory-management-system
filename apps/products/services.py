@@ -8,8 +8,8 @@ class ProductService:
     """
 
     @staticmethod
-    def create_product(sku: str, name: str, price: float, category_id: int, supplier_id: int = None, **kwargs) -> Product:
-        if price <= 0:
+    def create_product(sku: str, name: str, unit_price: float, category_id: int, supplier_id: int = None, **kwargs) -> Product:
+        if unit_price <= 0:
             raise ValidationError("Product price must be greater than zero.")
         
         # Check SKU uniqueness before hitting the DB constraint
@@ -19,7 +19,7 @@ class ProductService:
         product = Product.objects.create(
             sku=sku,
             name=name,
-            price=price,
+            unit_price=unit_price,
             category_id=category_id,
             supplier_id=supplier_id,
             **kwargs
@@ -27,8 +27,8 @@ class ProductService:
         return product
 
     @staticmethod
-    def update_product(product: Product, sku: str, name: str, price: float, category_id: int, supplier_id: int = None, **kwargs) -> Product:
-        if price <= 0:
+    def update_product(product: Product, sku: str, name: str, unit_price: float, category_id: int, supplier_id: int = None, **kwargs) -> Product:
+        if unit_price <= 0:
             raise ValidationError("Product price must be greater than zero.")
         
         if product.sku != sku and Product.objects.filter(sku=sku).exists():
@@ -36,7 +36,7 @@ class ProductService:
             
         product.sku = sku
         product.name = name
-        product.price = price
+        product.unit_price = unit_price
         product.category_id = category_id
         product.supplier_id = supplier_id
         for key, value in kwargs.items():

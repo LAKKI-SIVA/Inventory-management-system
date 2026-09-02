@@ -1,48 +1,10 @@
-from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .models import Product
-from .serializers import ProductSerializer
-from .services import ProductService
 from .forms import ProductForm
 from .services import ProductService
-
-class ProductListCreateAPIView(generics.ListCreateAPIView):
-    """
-    API endpoint that allows products to be viewed or created.
-    Uses the ProductService to handle creation logic instead of standard DRF saving.
-    """
-    queryset = Product.objects.select_related('category', 'supplier').all()
-    serializer_class = ProductSerializer
-    permission_classes = (IsAuthenticated,)
-
-    def perform_create(self, serializer):
-        # We extract validated data and send it to our business logic service!
-        data = serializer.validated_data
-        
-        # We manually call our service layer instead of serializer.save()
-        product = ProductService.create_product(
-            sku=data['sku'],
-            name=data['name'],
-            price=data['price'],
-            category_id=data['category'].id,
-            supplier_id=data['supplier'].id if data.get('supplier') else None,
-            description=data.get('description', ''),
-            status=data.get('status', Product.Status.DRAFT)
-        )
-
-
-class ProductRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint that allows a single product to be viewed, updated, or deleted.
-    """
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-    permission_classes = (IsAuthenticated,)
-
 
 # ---------------------------------------------------------
 # HTML UI VIEWS (No JS)
@@ -55,6 +17,7 @@ class ProductListView(LoginRequiredMixin, ListView):
     model = Product
     template_name = 'products/list.html'
     context_object_name = 'products'
+    paginate_by = 10
     
     def get_queryset(self):
         queryset = Product.objects.select_related('category', 'supplier').all().order_by('-id')
@@ -82,7 +45,7 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
             ProductService.create_product(
                 sku=form.cleaned_data['sku'],
                 name=form.cleaned_data['name'],
-                price=form.cleaned_data['price'],
+                unit_price=form.cleaned_data['unit_price'],
                 category_id=form.cleaned_data['category'].id,
                 supplier_id=form.cleaned_data['supplier'].id if form.cleaned_data.get('supplier') else None,
                 description=form.cleaned_data.get('description', ''),
@@ -94,7 +57,6 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
             messages.error(self.request, str(e))
             return self.form_invalid(form)
 
-from django.views.generic import UpdateView, DeleteView, DetailView
 
 class ProductDetailView(LoginRequiredMixin, DetailView):
     """
@@ -120,7 +82,7 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
                 product=self.get_object(),
                 sku=form.cleaned_data['sku'],
                 name=form.cleaned_data['name'],
-                price=form.cleaned_data['price'],
+                unit_price=form.cleaned_data['unit_price'],
                 category_id=form.cleaned_data['category'].id,
                 supplier_id=form.cleaned_data['supplier'].id if form.cleaned_data.get('supplier') else None,
                 description=form.cleaned_data.get('description', ''),

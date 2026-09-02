@@ -372,3 +372,539 @@ INFO 2026-09-02 14:55:38,348 autoreload 19328 12676 Watching for file changes wi
 INFO 2026-09-02 14:55:58,966 basehttp 304 2336 "GET / HTTP/1.1" 302 0
 INFO 2026-09-02 14:55:59,059 basehttp 304 2336 "GET /products/ HTTP/1.1" 200 21099
 INFO 2026-09-02 14:56:02,027 basehttp 304 2336 "GET /products/new/ HTTP/1.1" 200 16126
+INFO 2026-09-02 15:53:23,613 autoreload 16600 16596 Watching for file changes with StatReloader
+INFO 2026-09-02 15:55:39,632 autoreload 19416 19388 Watching for file changes with StatReloader
+INFO 2026-09-02 18:04:29,624 autoreload 8620 15276 Watching for file changes with StatReloader
+INFO 2026-09-02 18:04:54,032 basehttp 8620 12308 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 18:04:56,734 basehttp 8620 12308 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-02 18:04:56,769 basehttp 8620 12308 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+WARNING 2026-09-02 18:04:57,657 log 8620 12308 Not Found: /favicon.ico
+WARNING 2026-09-02 18:04:57,658 basehttp 8620 12308 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-02 18:07:39,153 basehttp 8620 14616 "POST /accounts/login/?next=/products/ HTTP/1.1" 200 10556
+INFO 2026-09-02 20:12:57,187 autoreload 17356 16400 Watching for file changes with StatReloader
+INFO 2026-09-02 20:13:07,424 basehttp 17356 22164 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-02 20:13:18,950 basehttp 17356 22164 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 20:13:18,986 basehttp 17356 22164 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-02 20:13:19,012 basehttp 17356 22164 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-02 20:13:22,586 basehttp 17356 22164 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-02 20:14:15,163 basehttp 17356 22164 "POST /accounts/register/ HTTP/1.1" 200 10954
+INFO 2026-09-02 20:14:32,232 basehttp 17356 22164 - Broken pipe from ('127.0.0.1', 64997)
+ERROR 2026-09-02 20:14:33,984 log 17356 20880 Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ~~~~~~~~~^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\accounts\forms.py", line 31, in save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\auth\base_user.py", line 62, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 1852, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+INFO 2026-09-02 20:14:34,008 basehttp 17356 20880 - Broken pipe from ('127.0.0.1', 49880)
+ERROR 2026-09-02 20:14:34,194 log 17356 20112 Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ~~~~~~~~~^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\accounts\forms.py", line 31, in save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\auth\base_user.py", line 62, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 1852, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+INFO 2026-09-02 20:14:34,208 basehttp 17356 20112 - Broken pipe from ('127.0.0.1', 54496)
+ERROR 2026-09-02 20:14:34,402 log 17356 22148 Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ~~~~~~~~~^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\accounts\forms.py", line 31, in save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\auth\base_user.py", line 62, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 1852, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+INFO 2026-09-02 20:14:34,413 basehttp 17356 22148 - Broken pipe from ('127.0.0.1', 65437)
+ERROR 2026-09-02 20:14:34,731 log 17356 3748 Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UniqueViolation: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\views\generic\edit.py", line 133, in form_valid
+    self.object = form.save()
+                  ~~~~~~~~~^^
+  File "C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\accounts\forms.py", line 31, in save
+    user.save()
+    ~~~~~~~~~^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\contrib\auth\base_user.py", line 62, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\query.py", line 1852, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Hp\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\psycopg\cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "auth_user_username_key"
+DETAIL:  Key (username)=(karthik@gmail.com) already exists.
+ERROR 2026-09-02 20:14:34,742 basehttp 17356 3748 "POST /accounts/register/ HTTP/1.1" 500 189552
+INFO 2026-09-02 20:15:02,984 basehttp 17356 3748 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 20:15:02,997 basehttp 17356 3748 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-02 20:15:03,021 basehttp 17356 3748 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-02 20:15:09,858 basehttp 17356 3748 "POST /accounts/login/?next=/products/ HTTP/1.1" 200 10556
+INFO 2026-09-02 20:15:13,718 basehttp 17356 3748 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-02 20:15:17,742 basehttp 17356 3748 "GET /accounts/login/ HTTP/1.1" 200 10313
+WARNING 2026-09-02 20:15:20,417 log 17356 3748 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 20:15:20,418 basehttp 17356 3748 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+INFO 2026-09-02 20:16:07,141 autoreload 17356 16400 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\accounts\forms.py changed, reloading.
+INFO 2026-09-02 20:16:08,803 autoreload 12032 1888 Watching for file changes with StatReloader
+INFO 2026-09-02 20:16:32,375 basehttp 12032 22016 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 20:16:32,422 basehttp 12032 22016 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-02 20:16:32,481 basehttp 12032 22016 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-02 20:16:36,588 basehttp 12032 22016 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-02 20:17:50,576 basehttp 12032 22016 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-09-02 20:17:50,582 basehttp 12032 22016 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-02 20:18:35,413 basehttp 12032 22016 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-09-02 20:18:35,425 basehttp 12032 22016 "GET / HTTP/1.1" 302 0
+WARNING 2026-09-02 20:18:36,908 log 12032 9828 Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2026-09-02 20:18:36,910 basehttp 12032 9828 "POST /accounts/login/ HTTP/1.1" 403 2503
+INFO 2026-09-02 20:18:38,057 basehttp 12032 22016 - Broken pipe from ('127.0.0.1', 51845)
+WARNING 2026-09-02 20:18:43,799 log 12032 9828 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 20:18:43,803 basehttp 12032 9828 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+WARNING 2026-09-02 20:20:20,398 log 12032 9828 Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2026-09-02 20:20:20,401 basehttp 12032 9828 "POST /accounts/login/ HTTP/1.1" 403 2503
+WARNING 2026-09-02 20:20:20,548 log 12032 9828 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 20:20:20,550 basehttp 12032 9828 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+INFO 2026-09-02 20:22:40,067 autoreload 12032 1888 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-02 20:22:41,763 autoreload 20660 18772 Watching for file changes with StatReloader
+WARNING 2026-09-02 20:23:07,788 log 20660 11756 Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2026-09-02 20:23:07,791 basehttp 20660 11756 "POST /accounts/login/ HTTP/1.1" 403 2503
+WARNING 2026-09-02 20:23:07,969 log 20660 11756 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 20:23:07,971 basehttp 20660 11756 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+WARNING 2026-09-02 20:23:13,131 log 20660 11756 Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2026-09-02 20:23:13,132 basehttp 20660 11756 "POST /accounts/login/ HTTP/1.1" 403 2503
+WARNING 2026-09-02 20:23:13,266 log 20660 11756 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 20:23:13,267 basehttp 20660 11756 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+WARNING 2026-09-02 21:06:27,061 log 20660 22208 Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2026-09-02 21:06:27,063 basehttp 20660 22208 "POST /accounts/login/ HTTP/1.1" 403 2503
+WARNING 2026-09-02 21:06:27,192 log 20660 22208 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 21:06:27,194 basehttp 20660 22208 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+WARNING 2026-09-02 21:08:00,013 log 20660 22208 Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2026-09-02 21:08:00,015 basehttp 20660 22208 "POST /accounts/login/ HTTP/1.1" 403 2503
+WARNING 2026-09-02 21:08:00,142 log 20660 22208 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-02 21:08:00,144 basehttp 20660 22208 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+INFO 2026-09-02 21:10:03,825 autoreload 8108 9564 Watching for file changes with StatReloader
+INFO 2026-09-02 21:14:57,370 autoreload 9672 6348 Watching for file changes with StatReloader
+INFO 2026-09-02 21:16:08,985 basehttp 9672 16888 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 21:16:14,256 basehttp 9672 16888 "GET /products/ HTTP/1.1" 200 14829
+INFO 2026-09-02 21:16:14,364 basehttp 9672 16888 "GET /static/css/layout.css HTTP/1.1" 304 0
+INFO 2026-09-02 21:16:15,063 basehttp 9672 16888 "GET /static/css/tables.css HTTP/1.1" 304 0
+INFO 2026-09-02 21:16:15,068 basehttp 9672 7040 "GET /static/css/forms.css HTTP/1.1" 304 0
+INFO 2026-09-02 21:16:25,572 autoreload 9672 6348 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-02 21:16:27,380 autoreload 2912 2388 Watching for file changes with StatReloader
+INFO 2026-09-02 21:16:47,762 autoreload 2912 2388 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-02 21:16:48,771 autoreload 18380 22188 Watching for file changes with StatReloader
+INFO 2026-09-02 21:17:23,658 autoreload 18380 22188 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-02 21:17:24,726 autoreload 16356 5488 Watching for file changes with StatReloader
+INFO 2026-09-02 21:17:38,657 basehttp 16356 22368 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 21:17:43,477 basehttp 16356 22368 "GET /products/ HTTP/1.1" 200 14829
+INFO 2026-09-02 21:17:51,268 basehttp 16356 22368 - Broken pipe from ('127.0.0.1', 52785)
+INFO 2026-09-02 21:17:55,364 basehttp 16356 21072 - Broken pipe from ('127.0.0.1', 50066)
+INFO 2026-09-02 21:17:56,093 basehttp 16356 16696 - Broken pipe from ('127.0.0.1', 61098)
+INFO 2026-09-02 21:17:56,385 basehttp 16356 4220 - Broken pipe from ('127.0.0.1', 50328)
+INFO 2026-09-02 21:18:00,177 basehttp 16356 18712 - Broken pipe from ('127.0.0.1', 56541)
+INFO 2026-09-02 21:18:00,881 basehttp 16356 4640 "GET /inventory/ HTTP/1.1" 200 22795
+INFO 2026-09-02 21:18:00,946 basehttp 16356 4640 "GET /static/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-09-02 21:30:54,871 autoreload 11716 4800 Watching for file changes with StatReloader
+INFO 2026-09-02 21:31:21,374 basehttp 11716 15940 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 21:31:23,906 basehttp 11716 15940 "GET /products/ HTTP/1.1" 200 14829
+WARNING 2026-09-02 21:31:24,879 log 11716 15940 Not Found: /favicon.ico
+WARNING 2026-09-02 21:31:24,879 basehttp 11716 15940 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-02 21:31:31,133 basehttp 11716 15940 "GET /inventory/ HTTP/1.1" 200 22795
+INFO 2026-09-02 21:31:36,510 basehttp 11716 15940 "GET /products/ HTTP/1.1" 200 14829
+INFO 2026-09-02 21:31:42,763 basehttp 11716 15940 "GET /suppliers/ HTTP/1.1" 200 14375
+INFO 2026-09-02 22:43:38,473 basehttp 11716 16276 "GET /inventory/ HTTP/1.1" 302 0
+INFO 2026-09-02 22:43:38,494 basehttp 11716 16276 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-02 22:43:38,578 basehttp 11716 16080 "GET /accounts/login/?next=/inventory/ HTTP/1.1" 200 10313
+INFO 2026-09-02 22:43:38,582 basehttp 11716 16276 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-02 22:43:38,803 basehttp 11716 16276 "GET /static/css/base.css HTTP/1.1" 200 922
+INFO 2026-09-02 22:43:38,883 basehttp 11716 16080 "GET /static/css/auth.css HTTP/1.1" 200 6776
+INFO 2026-09-02 22:43:38,993 basehttp 11716 16080 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 200 816699
+WARNING 2026-09-02 22:43:39,215 log 11716 16080 Not Found: /favicon.ico
+WARNING 2026-09-02 22:43:39,217 basehttp 11716 16080 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-03 00:38:34,949 autoreload 14520 11688 Watching for file changes with StatReloader
+INFO 2026-09-03 00:38:58,414 autoreload 5980 544 Watching for file changes with StatReloader
+INFO 2026-09-03 00:39:07,911 basehttp 14520 12380 "GET / HTTP/1.1" 302 0
+INFO 2026-09-03 00:39:08,088 basehttp 14520 12380 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-03 00:39:08,152 basehttp 14520 12380 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-03 00:39:08,185 basehttp 14520 12380 "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2026-09-03 00:39:08,186 basehttp 14520 8784 "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-09-03 00:39:08,876 basehttp 14520 8784 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 304 0
+WARNING 2026-09-03 00:39:09,601 log 14520 8784 Not Found: /favicon.ico
+WARNING 2026-09-03 00:39:09,601 basehttp 14520 8784 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-03 00:39:12,059 basehttp 14520 8784 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-03 00:39:37,260 basehttp 14520 8784 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-09-03 00:39:37,274 basehttp 14520 8784 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-03 00:39:44,809 basehttp 14520 8784 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-09-03 00:39:44,818 basehttp 14520 8784 "GET / HTTP/1.1" 302 0
+INFO 2026-09-03 00:39:44,944 basehttp 14520 8784 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-03 00:39:45,000 basehttp 14520 8784 "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-09-03 00:39:48,506 basehttp 14520 8784 "GET /inventory/ HTTP/1.1" 200 22793
+INFO 2026-09-03 00:39:49,963 basehttp 14520 8784 "GET /categories/ HTTP/1.1" 200 14332
+INFO 2026-09-03 00:39:53,208 basehttp 14520 8784 "GET /categories/new/ HTTP/1.1" 200 13638
+INFO 2026-09-03 00:40:12,724 basehttp 14520 8784 "POST /categories/new/ HTTP/1.1" 302 0
+INFO 2026-09-03 00:40:12,815 basehttp 14520 8784 "GET /categories/ HTTP/1.1" 200 14711
+INFO 2026-09-03 00:40:19,970 basehttp 14520 8784 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-03 00:40:23,673 basehttp 14520 8784 "GET /products/new/ HTTP/1.1" 200 15913
+INFO 2026-09-03 00:40:50,341 basehttp 14520 8784 "POST /products/new/ HTTP/1.1" 200 16305
+INFO 2026-09-03 00:41:01,644 basehttp 14520 8784 "GET /customers/ HTTP/1.1" 200 14478
+INFO 2026-09-03 00:41:04,375 basehttp 14520 8784 "GET /customers/new/ HTTP/1.1" 200 14210
+INFO 2026-09-03 00:41:46,186 basehttp 14520 8784 "POST /customers/new/ HTTP/1.1" 302 0
+INFO 2026-09-03 00:41:46,292 basehttp 14520 8784 "GET /customers/ HTTP/1.1" 200 15407
+INFO 2026-09-03 00:50:07,001 autoreload 5980 544 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\products\models.py changed, reloading.
+INFO 2026-09-03 00:50:07,050 autoreload 14520 11688 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\products\models.py changed, reloading.

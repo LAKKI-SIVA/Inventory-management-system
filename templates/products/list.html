@@ -72,7 +72,7 @@
                 </td>
                 <td style="color: var(--text-secondary);">{{ product.sku }}</td>
                 <td>{{ product.category.name }}</td>
-                <td style="font-weight: 500;">${{ product.price|floatformat:2 }}</td>
+                <td style="font-weight: 500;">${{ product.unit_price|floatformat:2 }}</td>
                 <td>
                     {% if product.status == 'ACTIVE' %}
                         <span class="badge badge-success">Active</span>

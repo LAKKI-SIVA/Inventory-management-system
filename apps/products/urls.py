@@ -1,7 +1,5 @@
 from django.urls import path
 from .views import (
-    ProductListCreateAPIView, 
-    ProductRetrieveUpdateDestroyAPIView,
     ProductListView,
     ProductCreateView,
     ProductUpdateView,
@@ -10,13 +8,6 @@ from .views import (
 )
 
 urlpatterns = [
-    # ------------------
-    # REST API endpoints
-    # ------------------
-    path('api/', ProductListCreateAPIView.as_view(), name='api_product_list_create'),
-    path('api/<int:pk>/', ProductRetrieveUpdateDestroyAPIView.as_view(), name='api_product_detail'),
-
-    # ------------------
     # HTML UI endpoints
     # ------------------
     path('', ProductListView.as_view(), name='ui_product_list'),

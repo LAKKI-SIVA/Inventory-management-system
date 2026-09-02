@@ -54,24 +54,16 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="{{ form.description.id_for_label }}">{{ form.description.label }}</label>
-            {{ form.description }}
-            {% if form.description.errors %}
-                <span class="help-text" style="color: var(--danger-color);">{{ form.description.errors.0 }}</span>
-            {% endif %}
-        </div>
-
         <div class="form-row">
             <div class="form-col">
                 <div class="form-group">
-                    <label for="{{ form.price.id_for_label }}">{{ form.price.label }}</label>
+                    <label for="{{ form.unit_price.id_for_label }}">{{ form.unit_price.label }}</label>
                     <div style="position: relative;">
                         <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-secondary);">$</span>
-                        {{ form.price }}
+                        {{ form.unit_price }}
                     </div>
-                    {% if form.price.errors %}
-                        <span class="help-text" style="color: var(--danger-color);">{{ form.price.errors.0 }}</span>
+                    {% if form.unit_price.errors %}
+                        <span class="help-text" style="color: var(--danger-color);">{{ form.unit_price.errors.0 }}</span>
                     {% endif %}
                 </div>
             </div>
@@ -94,7 +86,7 @@
         <div class="form-row">
             <div class="form-col">
                 <div class="form-group">
-                    <label for="{{ form.category.id_for_label }}">{{ form.category.label }}</label>
+                    <label for="{{ form.category.id_for_label }}">{{ form.category.label }} <span style="color: var(--danger-color);">*</span></label>
                     {{ form.category }}
                     {% if form.category.errors %}
                         <span class="help-text" style="color: var(--danger-color);">{{ form.category.errors.0 }}</span>
@@ -112,6 +104,27 @@
             </div>
         </div>
         
+        <div class="form-row">
+            <div class="form-group" style="grid-column: 1 / -1;">
+                <label for="{{ form.description.id_for_label }}">{{ form.description.label }}</label>
+                {{ form.description }}
+                {% if form.description.errors %}
+                    <span class="help-text" style="color: var(--danger-color);">{{ form.description.errors.0 }}</span>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="{{ form.image.id_for_label }}">{{ form.image.label }}</label>
+                {{ form.image }}
+                {% if form.image.errors %}
+                    <span class="help-text" style="color: var(--danger-color);">{{ form.image.errors.0 }}</span>
+                {% endif %}
+                <span class="help-text">Optional. Max size 2MB.</span>
+            </div>
+        </div>
+        
         <div class="form-actions">
             <a href="{% url 'ui_product_list' %}" class="btn btn-outline">Cancel</a>
             <button type="submit" class="btn btn-primary">Save Product</button>
@@ -119,9 +132,8 @@
     </form>
 </div>
 
-<!-- Inline CSS specific to this form to handle the price input padding -->
 <style>
-    #id_price {
+    #id_unit_price {
         padding-left: 2rem;
     }
 </style>
