@@ -290,3 +290,85 @@ INFO 2026-08-31 12:20:23,747 autoreload 1812 31636 C:\Users\Hp\Documents\Invento
 INFO 2026-08-31 12:20:23,928 autoreload 24060 3744 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
 INFO 2026-08-31 12:20:25,327 autoreload 28124 27976 Watching for file changes with StatReloader
 INFO 2026-08-31 12:20:25,328 autoreload 11200 12440 Watching for file changes with StatReloader
+INFO 2026-08-31 12:21:41,261 autoreload 11200 12440 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-08-31 12:21:42,224 autoreload 12312 1516 Watching for file changes with StatReloader
+INFO 2026-08-31 12:21:42,294 autoreload 28124 27976 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-08-31 12:21:43,284 autoreload 24860 31584 Watching for file changes with StatReloader
+INFO 2026-08-31 12:23:36,061 autoreload 7732 23476 Watching for file changes with StatReloader
+INFO 2026-08-31 12:23:54,817 basehttp 7732 6484 "GET / HTTP/1.1" 302 0
+INFO 2026-08-31 12:23:54,897 basehttp 7732 6484 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-08-31 12:23:54,937 basehttp 7732 6484 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-08-31 12:23:54,959 basehttp 7732 6484 "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:23:54,961 basehttp 7732 1200 "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:23:55,482 basehttp 7732 1200 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 304 0
+INFO 2026-08-31 12:23:59,598 basehttp 7732 1200 "POST /accounts/login/?next=/products/ HTTP/1.1" 200 10556
+INFO 2026-08-31 12:24:01,753 basehttp 7732 1200 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-08-31 12:24:27,246 basehttp 7732 1200 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-08-31 12:24:27,251 basehttp 7732 1200 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-08-31 12:24:33,547 basehttp 7732 1200 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-08-31 12:24:33,552 basehttp 7732 1200 "GET / HTTP/1.1" 302 0
+INFO 2026-08-31 12:24:33,642 basehttp 7732 1200 "GET /products/ HTTP/1.1" 200 21101
+INFO 2026-08-31 12:24:33,678 basehttp 7732 1200 "GET /static/css/layout.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:24:33,684 basehttp 7732 6484 "GET /static/css/tables.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:24:33,685 basehttp 7732 1200 "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:24:33,687 basehttp 7732 5952 "GET /static/css/forms.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:24:35,763 basehttp 7732 5952 "GET /categories/ HTTP/1.1" 200 16232
+INFO 2026-08-31 12:24:39,422 basehttp 7732 5952 "GET /categories/ HTTP/1.1" 200 16232
+INFO 2026-08-31 12:24:40,753 basehttp 7732 5952 "GET /products/ HTTP/1.1" 200 21101
+INFO 2026-08-31 12:24:41,773 basehttp 7732 5952 "GET /suppliers/ HTTP/1.1" 200 17152
+INFO 2026-08-31 12:24:42,785 basehttp 7732 5952 "GET /inventory/ HTTP/1.1" 200 25923
+INFO 2026-08-31 12:24:42,814 basehttp 7732 5952 "GET /static/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-08-31 12:24:43,646 basehttp 7732 5952 "GET /orders/ HTTP/1.1" 200 14000
+INFO 2026-08-31 12:24:45,033 basehttp 7732 5952 "GET /customers/ HTTP/1.1" 200 14478
+INFO 2026-08-31 12:24:46,629 basehttp 7732 5952 "GET /orders/ HTTP/1.1" 200 14000
+INFO 2026-08-31 12:24:47,669 basehttp 7732 5952 "GET /inventory/ HTTP/1.1" 200 25923
+INFO 2026-08-31 12:24:48,748 basehttp 7732 5952 "GET /suppliers/ HTTP/1.1" 200 17152
+INFO 2026-08-31 12:24:49,621 basehttp 7732 5952 "GET /products/ HTTP/1.1" 200 21101
+INFO 2026-08-31 12:24:50,843 basehttp 7732 5952 "GET /categories/ HTTP/1.1" 200 16232
+INFO 2026-08-31 12:24:51,916 basehttp 7732 5952 "GET /inventory/ HTTP/1.1" 200 25923
+INFO 2026-08-31 12:24:58,761 basehttp 7732 5952 "GET /categories/ HTTP/1.1" 200 16232
+INFO 2026-08-31 12:25:01,106 basehttp 7732 5952 "GET /inventory/ HTTP/1.1" 200 25923
+INFO 2026-08-31 12:25:02,242 basehttp 7732 5952 "GET /orders/ HTTP/1.1" 200 14000
+INFO 2026-08-31 12:25:03,207 basehttp 7732 5952 "GET /customers/ HTTP/1.1" 200 14478
+INFO 2026-08-31 12:25:05,552 basehttp 7732 5952 "GET /customers/ HTTP/1.1" 200 14478
+INFO 2026-08-31 12:25:06,363 basehttp 7732 5952 "GET /inventory/ HTTP/1.1" 200 25923
+INFO 2026-08-31 12:25:07,075 basehttp 7732 5952 "GET /orders/ HTTP/1.1" 200 14000
+INFO 2026-09-01 12:19:05,795 basehttp 7732 8820 "GET /orders/ HTTP/1.1" 200 14000
+INFO 2026-09-01 12:19:06,927 basehttp 7732 14316 "GET /static/css/forms.css HTTP/1.1" 200 2180
+INFO 2026-09-01 12:19:06,928 basehttp 7732 8820 "GET /static/css/tables.css HTTP/1.1" 200 2415
+INFO 2026-09-01 12:57:08,120 basehttp 7732 18072 "GET /customers/ HTTP/1.1" 200 14478
+INFO 2026-09-01 12:57:08,344 basehttp 7732 18072 "GET /static/css/tables.css HTTP/1.1" 200 2415
+INFO 2026-09-01 12:57:08,361 basehttp 7732 16372 "GET /static/css/forms.css HTTP/1.1" 200 2180
+INFO 2026-09-01 12:58:08,675 basehttp 7732 16372 - Broken pipe from ('127.0.0.1', 64581)
+INFO 2026-09-01 12:58:08,676 basehttp 7732 18072 - Broken pipe from ('127.0.0.1', 65023)
+INFO 2026-09-02 12:09:23,752 autoreload 16728 12540 Watching for file changes with StatReloader
+INFO 2026-09-02 12:09:54,865 autoreload 3608 13032 Watching for file changes with StatReloader
+INFO 2026-09-02 12:13:19,029 autoreload 9220 4204 Watching for file changes with StatReloader
+INFO 2026-09-02 12:14:28,289 autoreload 304 4944 Watching for file changes with StatReloader
+INFO 2026-09-02 12:14:37,725 basehttp 304 1860 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 12:14:37,755 basehttp 304 1860 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-02 12:14:37,897 basehttp 304 1860 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-02 12:14:38,042 basehttp 304 16712 "GET /static/css/auth.css HTTP/1.1" 200 6776
+INFO 2026-09-02 12:14:38,045 basehttp 304 1860 "GET /static/css/base.css HTTP/1.1" 200 922
+INFO 2026-09-02 12:14:38,622 basehttp 304 1860 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 200 816699
+WARNING 2026-09-02 12:14:39,403 log 304 1860 Not Found: /favicon.ico
+WARNING 2026-09-02 12:14:39,404 basehttp 304 1860 "GET /favicon.ico HTTP/1.1" 404 3115
+INFO 2026-09-02 12:14:41,559 basehttp 304 1860 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-02 12:15:18,025 basehttp 304 1860 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-09-02 12:15:18,033 basehttp 304 1860 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-02 12:15:28,175 basehttp 304 1860 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-09-02 12:15:28,184 basehttp 304 1860 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 12:15:28,224 basehttp 304 1860 "GET /products/ HTTP/1.1" 200 14825
+INFO 2026-09-02 12:15:28,317 basehttp 304 16712 "GET /static/css/components.css HTTP/1.1" 200 1454
+INFO 2026-09-02 12:15:28,318 basehttp 304 1860 "GET /static/css/layout.css HTTP/1.1" 200 3993
+INFO 2026-09-02 12:15:28,318 basehttp 304 2740 "GET /static/css/forms.css HTTP/1.1" 200 2180
+INFO 2026-09-02 12:15:28,319 basehttp 304 16112 "GET /static/css/tables.css HTTP/1.1" 200 2415
+INFO 2026-09-02 12:15:31,863 basehttp 304 1860 "GET /inventory/ HTTP/1.1" 200 22791
+INFO 2026-09-02 12:15:31,914 basehttp 304 1860 "GET /static/css/dashboard.css HTTP/1.1" 200 5691
+INFO 2026-09-02 12:15:32,959 basehttp 304 1860 "GET /categories/ HTTP/1.1" 200 14330
+INFO 2026-09-02 12:25:30,115 basehttp 304 15016 "GET /inventory/ HTTP/1.1" 200 22791
+INFO 2026-09-02 12:26:10,970 basehttp 304 15016 "GET /categories/ HTTP/1.1" 200 14330
+INFO 2026-09-02 14:55:38,348 autoreload 19328 12676 Watching for file changes with StatReloader
+INFO 2026-09-02 14:55:58,966 basehttp 304 2336 "GET / HTTP/1.1" 302 0
+INFO 2026-09-02 14:55:59,059 basehttp 304 2336 "GET /products/ HTTP/1.1" 200 21099
+INFO 2026-09-02 14:56:02,027 basehttp 304 2336 "GET /products/new/ HTTP/1.1" 200 16126
