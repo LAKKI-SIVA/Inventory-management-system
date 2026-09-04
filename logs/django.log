@@ -908,3 +908,151 @@ INFO 2026-09-03 00:41:46,186 basehttp 14520 8784 "POST /customers/new/ HTTP/1.1"
 INFO 2026-09-03 00:41:46,292 basehttp 14520 8784 "GET /customers/ HTTP/1.1" 200 15407
 INFO 2026-09-03 00:50:07,001 autoreload 5980 544 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\products\models.py changed, reloading.
 INFO 2026-09-03 00:50:07,050 autoreload 14520 11688 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\apps\products\models.py changed, reloading.
+INFO 2026-09-03 00:50:08,764 autoreload 1704 7572 Watching for file changes with StatReloader
+INFO 2026-09-03 00:50:08,764 autoreload 6368 2780 Watching for file changes with StatReloader
+INFO 2026-09-03 00:55:08,360 autoreload 15848 9628 Watching for file changes with StatReloader
+INFO 2026-09-03 00:55:20,768 basehttp 15848 17004 "GET / HTTP/1.1" 302 0
+INFO 2026-09-03 00:55:21,023 basehttp 15848 17004 "GET /products/ HTTP/1.1" 200 15953
+WARNING 2026-09-02 19:40:39,440 log 10 139333638071104 Not Found: /favicon.ico
+ry_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-03 01:03:41,364 autoreload 5908 12300 Watching for file changes with StatReloader
+INFO 2026-09-03 01:03:42,753 autoreload 5908 12300 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-03 01:03:43,970 autoreload 13024 7708 Watching for file changes with StatReloader
+INFO 2026-09-03 01:07:39,976 autoreload 13024 7708 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\settings.py changed, reloading.
+INFO 2026-09-03 01:07:41,353 autoreload 20324 6408 Watching for file changes with StatReloader
+WARNING 2026-09-03 01:08:32,786 log 20324 13696 Not Found: /api/docs/swagger/
+WARNING 2026-09-03 01:08:32,787 basehttp 20324 13696 "GET /api/docs/swagger/ HTTP/1.1" 404 3618
+INFO 2026-09-03 01:08:33,122 basehttp 20324 13696 - Broken pipe from ('127.0.0.1', 50644)
+INFO 2026-09-03 01:08:50,710 autoreload 20324 6408 C:\Users\Hp\Documents\Inventory_Management_System\Inventory-management-system\config\urls.py changed, reloading.
+INFO 2026-09-03 01:08:52,291 autoreload 19760 20000 Watching for file changes with StatReloader
+INFO 2026-09-04 20:42:53,475 autoreload 16188 13092 Watching for file changes with StatReloader
+INFO 2026-09-04 20:45:01,862 autoreload 19776 416 Watching for file changes with StatReloader
+INFO 2026-09-04 21:29:59,923 autoreload 16448 15384 Watching for file changes with StatReloader
+INFO 2026-09-04 21:30:43,923 basehttp 16448 5484 "GET / HTTP/1.1" 302 0
+INFO 2026-09-04 21:30:43,940 basehttp 16448 5484 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-04 21:30:43,980 basehttp 16448 5484 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-04 21:30:44,004 basehttp 16448 5484 "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2026-09-04 21:30:44,006 basehttp 16448 17244 "GET /static/css/auth.css HTTP/1.1" 304 0
+WARNING 2026-09-04 21:30:45,117 log 16448 17244 Not Found: /favicon.ico
+WARNING 2026-09-04 21:30:45,118 basehttp 16448 17244 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-04 21:30:46,921 basehttp 16448 17244 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 21:30:48,710 basehttp 16448 17244 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 304 0
+INFO 2026-09-04 21:30:51,396 basehttp 16448 17244 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-04 22:14:22,011 autoreload 14044 17732 Watching for file changes with StatReloader
+INFO 2026-09-04 22:14:35,442 basehttp 14044 15268 "GET / HTTP/1.1" 302 0
+INFO 2026-09-04 22:14:35,464 basehttp 14044 15268 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-04 22:14:35,533 basehttp 14044 15268 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+WARNING 2026-09-04 22:14:37,084 log 14044 15268 Not Found: /favicon.ico
+WARNING 2026-09-04 22:14:37,085 basehttp 14044 15268 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-04 22:14:41,001 basehttp 14044 15268 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 22:14:42,484 basehttp 14044 15268 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-04 22:14:52,060 basehttp 14044 15268 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 22:14:53,384 basehttp 14044 15268 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-04 22:14:54,785 basehttp 14044 15268 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 22:14:56,437 basehttp 14044 15268 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-04 22:14:58,136 basehttp 14044 15268 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 22:14:59,426 basehttp 14044 15268 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-04 22:15:00,913 basehttp 14044 15268 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 22:15:03,966 basehttp 14044 15268 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-04 22:24:22,978 basehttp 14044 4512 "POST /accounts/login/ HTTP/1.1" 200 10556
+INFO 2026-09-04 22:24:26,231 basehttp 14044 4512 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-04 22:24:45,381 basehttp 14044 4512 "POST /accounts/register/ HTTP/1.1" 200 10950
+INFO 2026-09-05 01:56:08,707 autoreload 10284 23904 Watching for file changes with StatReloader
+INFO 2026-09-05 01:56:38,672 autoreload 18888 20244 Watching for file changes with StatReloader
+INFO 2026-09-05 01:58:09,881 autoreload 9456 13760 Watching for file changes with StatReloader
+INFO 2026-09-05 01:58:20,046 autoreload 21908 15352 Watching for file changes with StatReloader
+INFO 2026-09-05 02:00:22,733 autoreload 22976 22612 Watching for file changes with StatReloader
+INFO 2026-09-05 02:02:46,452 autoreload 14528 22800 Watching for file changes with StatReloader
+INFO 2026-09-05 02:10:45,553 autoreload 23324 20744 Watching for file changes with StatReloader
+INFO 2026-09-05 02:10:54,955 basehttp 23324 18224 "GET / HTTP/1.1" 302 0
+INFO 2026-09-05 02:10:55,015 basehttp 23324 18224 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:10:55,100 basehttp 23324 18224 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-05 02:11:02,028 basehttp 23324 18224 "POST /accounts/login/?next=/products/ HTTP/1.1" 200 10556
+WARNING 2026-09-05 02:11:05,758 log 23324 18224 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-09-05 02:11:05,760 basehttp 23324 18224 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3711
+INFO 2026-09-05 02:11:13,314 basehttp 23324 18224 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-05 02:11:33,979 basehttp 23324 18224 "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:11:33,995 basehttp 23324 18224 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-05 02:11:42,333 basehttp 23324 18224 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:11:42,340 basehttp 23324 18224 "GET / HTTP/1.1" 302 0
+INFO 2026-09-05 02:11:42,450 basehttp 23324 18224 "GET /products/ HTTP/1.1" 200 14829
+INFO 2026-09-05 02:11:42,540 basehttp 23324 18224 "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-09-05 02:11:42,542 basehttp 23324 6152 "GET /static/css/layout.css HTTP/1.1" 304 0
+INFO 2026-09-05 02:11:42,561 basehttp 23324 4368 "GET /static/css/tables.css HTTP/1.1" 304 0
+INFO 2026-09-05 02:11:42,562 basehttp 23324 17772 "GET /static/css/forms.css HTTP/1.1" 304 0
+INFO 2026-09-05 02:11:48,539 basehttp 23324 17772 "GET /categories/ HTTP/1.1" 200 14334
+INFO 2026-09-05 02:14:06,042 basehttp 23324 17772 "GET /admin/](http://127.0.0.1:8000/admin/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:14:06,227 basehttp 23324 17772 "GET /admin/login/?next=/admin/%255D%28http%3A//127.0.0.1%3A8000/admin/ HTTP/1.1" 200 3757
+INFO 2026-09-05 02:14:06,685 basehttp 23324 17772 "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2026-09-05 02:14:06,688 basehttp 23324 18224 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-09-05 02:14:06,690 basehttp 23324 22628 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2026-09-05 02:14:06,691 basehttp 23324 4368 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2026-09-05 02:14:06,692 basehttp 23324 6316 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-09-05 02:14:06,693 basehttp 23324 6152 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-09-05 02:14:06,951 basehttp 23324 6152 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-09-05 02:14:11,044 basehttp 23324 6152 "POST /admin/login/?next=/admin/%255D%28http%3A//127.0.0.1%3A8000/admin/ HTTP/1.1" 200 3929
+INFO 2026-09-05 02:15:52,941 autoreload 19480 24416 Watching for file changes with StatReloader
+INFO 2026-09-05 02:16:11,486 basehttp 19480 23360 "GET / HTTP/1.1" 302 0
+INFO 2026-09-05 02:16:11,642 basehttp 19480 23360 "GET /products/ HTTP/1.1" 200 14829
+INFO 2026-09-05 02:16:15,460 basehttp 19480 23360 "GET /categories/ HTTP/1.1" 200 14334
+INFO 2026-09-05 02:16:17,051 basehttp 19480 23360 "GET /products/ HTTP/1.1" 200 14829
+INFO 2026-09-05 02:16:18,259 basehttp 19480 23360 "GET /suppliers/ HTTP/1.1" 200 14375
+INFO 2026-09-05 02:16:19,499 basehttp 19480 23360 "GET /inventory/ HTTP/1.1" 200 22795
+INFO 2026-09-05 02:16:19,563 basehttp 19480 23360 "GET /static/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-09-05 02:16:20,379 basehttp 19480 23360 "GET /orders/ HTTP/1.1" 200 14002
+INFO 2026-09-05 02:16:21,587 basehttp 19480 23360 "GET /customers/ HTTP/1.1" 200 14480
+INFO 2026-09-05 02:17:03,973 basehttp 19480 23360 "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:17:03,988 basehttp 19480 23360 "GET /accounts/login/ HTTP/1.1" 200 10313
+INFO 2026-09-05 02:17:17,359 basehttp 19480 23360 "POST /accounts/login/ HTTP/1.1" 200 10556
+INFO 2026-09-05 02:18:13,933 basehttp 19480 23360 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:18:14,028 basehttp 19480 23360 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+INFO 2026-09-05 02:18:18,912 basehttp 19480 23360 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4332
+INFO 2026-09-05 02:18:45,519 basehttp 19480 23360 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:18:45,642 basehttp 19480 23360 "GET /admin/ HTTP/1.1" 200 5291
+INFO 2026-09-05 02:18:45,762 basehttp 19480 23360 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-09-05 02:18:45,792 basehttp 19480 18792 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-09-05 02:18:45,792 basehttp 19480 23360 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-09-05 02:18:56,283 basehttp 19480 23360 "GET /admin/auth/group/add/ HTTP/1.1" 200 13621
+INFO 2026-09-05 02:18:56,368 basehttp 19480 23360 "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+INFO 2026-09-05 02:18:56,381 basehttp 19480 11660 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-09-05 02:18:56,392 basehttp 19480 23360 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2026-09-05 02:18:56,428 basehttp 19480 23732 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-09-05 02:18:56,430 basehttp 19480 11232 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO 2026-09-05 02:18:56,436 basehttp 19480 17300 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-09-05 02:18:56,438 basehttp 19480 23360 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+INFO 2026-09-05 02:18:56,446 basehttp 19480 11660 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2026-09-05 02:18:56,449 basehttp 19480 18792 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:18:56,459 basehttp 19480 23732 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-09-05 02:18:56,466 basehttp 19480 23360 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-09-05 02:18:56,479 basehttp 19480 11232 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-09-05 02:18:56,490 basehttp 19480 18792 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO 2026-09-05 02:18:56,499 basehttp 19480 17300 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-09-05 02:18:56,515 basehttp 19480 18792 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-09-05 02:18:56,766 basehttp 19480 17300 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2026-09-05 02:18:56,768 basehttp 19480 23360 "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+INFO 2026-09-05 02:18:56,769 basehttp 19480 18792 "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+INFO 2026-09-05 02:18:56,771 basehttp 19480 11232 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2026-09-05 02:19:05,034 basehttp 19480 11232 "POST /admin/auth/group/add/ HTTP/1.1" 200 13784
+INFO 2026-09-05 02:19:05,147 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:11,003 basehttp 19480 11232 "POST /admin/auth/group/add/ HTTP/1.1" 200 13784
+INFO 2026-09-05 02:19:11,116 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:17,396 basehttp 19480 11232 "POST /admin/auth/group/add/ HTTP/1.1" 302 0
+INFO 2026-09-05 02:19:17,510 basehttp 19480 11232 "GET /admin/auth/group/ HTTP/1.1" 200 8570
+INFO 2026-09-05 02:19:17,565 basehttp 19480 11232 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2026-09-05 02:19:17,642 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:17,649 basehttp 19480 18792 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-09-05 02:19:17,682 basehttp 19480 18792 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-09-05 02:19:17,685 basehttp 19480 11232 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-09-05 02:19:25,289 basehttp 19480 11232 "GET /admin/auth/group/add/ HTTP/1.1" 200 13621
+INFO 2026-09-05 02:19:25,389 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:29,905 basehttp 19480 11232 "POST /admin/auth/group/add/ HTTP/1.1" 200 13784
+INFO 2026-09-05 02:19:30,010 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:35,115 basehttp 19480 11232 "GET /admin/auth/group/ HTTP/1.1" 200 8370
+INFO 2026-09-05 02:19:35,225 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:38,065 basehttp 19480 11232 "GET /admin/auth/group/add/ HTTP/1.1" 200 13621
+INFO 2026-09-05 02:19:38,172 basehttp 19480 11232 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-09-05 02:19:39,392 basehttp 19480 11232 "GET / HTTP/1.1" 302 0
+INFO 2026-09-05 02:19:39,464 basehttp 19480 11232 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-05 02:26:21,203 autoreload 14544 23780 Watching for file changes with StatReloader
+INFO 2026-09-05 02:27:15,560 basehttp 14544 15704 "GET / HTTP/1.1" 302 0
+INFO 2026-09-05 02:27:15,731 basehttp 14544 15704 "GET /products/ HTTP/1.1" 200 14827
