@@ -1056,3 +1056,23 @@ INFO 2026-09-05 02:19:39,464 basehttp 19480 11232 "GET /products/ HTTP/1.1" 200 
 INFO 2026-09-05 02:26:21,203 autoreload 14544 23780 Watching for file changes with StatReloader
 INFO 2026-09-05 02:27:15,560 basehttp 14544 15704 "GET / HTTP/1.1" 302 0
 INFO 2026-09-05 02:27:15,731 basehttp 14544 15704 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-07 14:48:09,004 autoreload 5648 12624 Watching for file changes with StatReloader
+INFO 2026-09-07 15:31:08,890 autoreload 16588 17100 Watching for file changes with StatReloader
+INFO 2026-09-07 15:31:17,339 basehttp 16588 16256 "GET / HTTP/1.1" 302 0
+INFO 2026-09-07 15:31:17,536 basehttp 16588 16256 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-07 15:31:17,589 basehttp 16588 16256 "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2026-09-07 15:31:17,590 basehttp 16588 17592 "GET /static/css/layout.css HTTP/1.1" 304 0
+INFO 2026-09-07 15:31:18,212 basehttp 16588 17592 "GET /static/css/components.css HTTP/1.1" 304 0
+INFO 2026-09-07 15:31:18,212 basehttp 16588 16256 "GET /static/css/tables.css HTTP/1.1" 304 0
+INFO 2026-09-07 15:31:18,217 basehttp 16588 17592 "GET /static/css/forms.css HTTP/1.1" 304 0
+WARNING 2026-09-07 15:31:19,051 log 16588 17592 Not Found: /favicon.ico
+WARNING 2026-09-07 15:31:19,053 basehttp 16588 17592 "GET /favicon.ico HTTP/1.1" 404 3600
+INFO 2026-09-07 15:31:20,271 basehttp 16588 17592 "GET /categories/ HTTP/1.1" 200 14332
+INFO 2026-09-07 15:31:21,467 basehttp 16588 17592 "GET /suppliers/ HTTP/1.1" 200 14373
+INFO 2026-09-07 15:51:26,981 autoreload 15168 15392 Watching for file changes with StatReloader
+INFO 2026-09-07 15:51:35,670 basehttp 15168 15204 "GET / HTTP/1.1" 302 0
+INFO 2026-09-07 15:51:35,745 basehttp 15168 15204 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-07 15:51:38,001 basehttp 15168 15204 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-07 15:51:40,529 basehttp 15168 15204 "GET /suppliers/ HTTP/1.1" 200 14373
+INFO 2026-09-07 15:51:41,898 basehttp 15168 15204 "GET /inventory/ HTTP/1.1" 200 22793
+INFO 2026-09-07 15:51:41,922 basehttp 15168 15204 "GET /static/css/dashboard.css HTTP/1.1" 304 0
