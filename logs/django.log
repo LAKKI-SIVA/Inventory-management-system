@@ -1079,3 +1079,12 @@ INFO 2026-09-07 15:51:41,922 basehttp 15168 15204 "GET /static/css/dashboard.css
 INFO 2026-09-07 17:32:07,919 autoreload 12960 6720 Watching for file changes with StatReloader
 INFO 2026-09-07 17:32:17,940 basehttp 12960 16824 "GET / HTTP/1.1" 302 0
 INFO 2026-09-07 17:32:18,033 basehttp 12960 16824 "GET /products/ HTTP/1.1" 200 14827
+INFO 2026-09-07 18:12:47,728 autoreload 16760 16900 Watching for file changes with StatReloader
+INFO 2026-09-07 18:20:49,690 autoreload 21144 7532 Watching for file changes with StatReloader
+INFO 2026-09-07 18:21:07,656 basehttp 21144 17932 "GET / HTTP/1.1" 302 0
+INFO 2026-09-07 18:21:07,673 basehttp 21144 17932 "GET /products/ HTTP/1.1" 302 0
+INFO 2026-09-07 18:21:07,706 basehttp 21144 17932 "GET /accounts/login/?next=/products/ HTTP/1.1" 200 10313
+INFO 2026-09-07 18:21:07,725 basehttp 21144 17932 "GET /static/css/auth.css HTTP/1.1" 304 0
+INFO 2026-09-07 18:21:08,148 basehttp 21144 17932 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 304 0
+INFO 2026-09-07 18:21:23,755 basehttp 21144 17932 "POST /accounts/login/?next=/products/ HTTP/1.1" 200 10556
+INFO 2026-09-07 18:21:31,450 basehttp 21144 17932 "GET /accounts/register/ HTTP/1.1" 200 10411

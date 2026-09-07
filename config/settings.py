@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': get_env_var('DB_ENGINE'),
         'NAME': get_env_var('DB_NAME'),
-        'USER': get_env_var('DB_USER'),
+        'USER': get_env_var('DB_USER', default=''),
         'PASSWORD': get_env_var('DB_PASSWORD', default=''),
         'HOST': get_env_var('DB_HOST', default='127.0.0.1'),
         'PORT': get_env_var('DB_PORT', default='5432'),
