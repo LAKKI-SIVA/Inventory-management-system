@@ -21,10 +21,10 @@ def seed():
     office_depot, _ = Supplier.objects.get_or_create(name='OfficeDepot', email='sales@officedepot.com', phone='098-765-4321', address='456 Office Blvd')
 
     # Products
-    p1, _ = Product.objects.get_or_create(sku='LAP-001', name='ThinkPad T14', description='Business laptop', price=1200.00, category=electronics, supplier=tech_corp)
-    p2, _ = Product.objects.get_or_create(sku='MON-001', name='Dell 27" Monitor', description='4K USB-C Monitor', price=450.00, category=electronics, supplier=tech_corp)
-    p3, _ = Product.objects.get_or_create(sku='CHAIR-001', name='Ergonomic Chair', description='Mesh back office chair', price=299.99, category=furniture, supplier=office_depot)
-    p4, _ = Product.objects.get_or_create(sku='PEN-001', name='Ballpoint Pens (50 pack)', description='Blue ink pens', price=15.99, category=office, supplier=office_depot)
+    p1, _ = Product.objects.get_or_create(sku='LAP-001', name='ThinkPad T14', description='Business laptop', unit_price=1200.00, category=electronics, supplier=tech_corp)
+    p2, _ = Product.objects.get_or_create(sku='MON-001', name='Dell 27" Monitor', description='4K USB-C Monitor', unit_price=450.00, category=electronics, supplier=tech_corp)
+    p3, _ = Product.objects.get_or_create(sku='CHAIR-001', name='Ergonomic Chair', description='Mesh back office chair', unit_price=299.99, category=furniture, supplier=office_depot)
+    p4, _ = Product.objects.get_or_create(sku='PEN-001', name='Ballpoint Pens (50 pack)', description='Blue ink pens', unit_price=15.99, category=office, supplier=office_depot)
 
     # Inventory Stock
     Stock.objects.get_or_create(product=p1, defaults={'quantity': 50, 'reorder_level': 10})
