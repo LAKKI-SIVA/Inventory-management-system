@@ -10,7 +10,14 @@ from apps.suppliers.models import Supplier
 from apps.products.models import Product
 from apps.inventory.models import Stock
 
+from django.contrib.auth import get_user_model
+
 def seed():
+    # Create Superuser automatically
+    User = get_user_model()
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', 'admin@example.com', 'Shiva@1234')
+
     # Categories
     electronics, _ = Category.objects.get_or_create(name='Electronics', description='Electronic devices and accessories')
     office, _ = Category.objects.get_or_create(name='Office Supplies', description='General office supplies')
