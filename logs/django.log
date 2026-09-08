@@ -1088,3 +1088,4 @@ INFO 2026-09-07 18:21:07,725 basehttp 21144 17932 "GET /static/css/auth.css HTTP
 INFO 2026-09-07 18:21:08,148 basehttp 21144 17932 "GET /static/images/warehouse_bg.jpg HTTP/1.1" 304 0
 INFO 2026-09-07 18:21:23,755 basehttp 21144 17932 "POST /accounts/login/?next=/products/ HTTP/1.1" 200 10556
 INFO 2026-09-07 18:21:31,450 basehttp 21144 17932 "GET /accounts/register/ HTTP/1.1" 200 10411
+INFO 2026-09-08 10:51:14,865 autoreload 14732 23496 Watching for file changes with StatReloader
